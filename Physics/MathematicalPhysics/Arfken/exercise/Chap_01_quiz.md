@@ -1,0 +1,84 @@
+# 决定静磁场的充要条件
+## *Helmholtz*定理
+\par任意矢量$\bm{a}(\bm{r})$若满足
+$$
+\begin{equation}
+|\bm{a}(\bm{r})|=O\left(\frac{1}{r^{1+\varepsilon}}\right)\ (r\to\infty),\ \varepsilon>0,
+\end{equation}
+$$
+则可分解为
+$$
+    \bm{a}(\bm{r})=\bm{a}_{l}(\bm{r})+\bm{a}_{t}(\bm{r}),
+$$
+其中$\bm{a}_{l}(\bm{r})$是散度分量(longtitudinal)，$\bm{a}_{t}(\bm{r})$是旋度分量(transversal)，满足
+$$
+\nabla\times\bm{a}_{l}(\bm{r})=0,\quad\nabla\cdot\bm{a}_{t}(\bm{r})=0,
+$$
+具体而言
+$$
+    \begin{equation}
+    \bm{a}_{l}(\bm{r})=\nabla_{\bm{r}}\left(-\frac{1}{4\pi}\int_{\mathbb{R}^3}\upd^3\bm{r}'\frac{\nabla_{\bm{r}'}\cdot\bm{a}(\bm{r}')}{|\bm{r}'-\bm{r}|}\right),\quad \bm{a}_{t}(\bm{r})=\nabla_{\bm{r}}\times\left(\frac{1}{4\pi}\int_{\mathbb{R}^3}\upd^3\bm{r}'\frac{\nabla_{\bm{r}'}\times\bm{a}(\bm{r}')}{|\bm{r}'-\bm{r}|}\right).
+    \end{equation}
+$$
+证明过程用到以下几个关系
+$$
+\begin{align}
+&\nabla\times\nabla\times\bm{A}=\nabla(\nabla\cdot\bm{A})-\Delta\bm{A},\\
+&\nabla\cdot(\varphi\bm{A})=\varphi\nabla\cdot\bm{A}+\nabla\varphi\cdot\bm{A},\\
+&\nabla\times(\varphi\bm{A})=\varphi\nabla\times\bm{A}+\nabla\varphi\times\bm{A},\\
+&\delta(\bm{r}'-\bm{r})=-\frac{1}{4\pi}\Delta_{\bm{r}}\frac{1}{|\bm{r}'-\bm{r}|},\\
+&\int_{V}\upd^3\bm{r}'\nabla_{\bm{r}'}\times\bm{A}=\int_{S}\upd\bm{f}'\times\bm{A}.
+\end{align}    
+$$
+考虑
+$$
+\begin{aligned}
+\frac{1}{4\pi}\nabla_{\bm{r}}\times\nabla_{\bm{r}}\times\int_{V}\upd^3\bm{r}'\frac{\bm{a}(\bm{r}')}{|\bm{r}'-\bm{r}|}&\overset{(3)}{=}
+\frac{1}{4\pi}\nabla_{\bm{r}}\int_{V}\upd^3\bm{r}'\nabla_{\bm{r}}\cdot\left(\frac{\bm{a}(\bm{r}')}{|\bm{r}'-\bm{r}|}\right)-\frac{1}{4\pi}\int_{V}\upd^3\bm{r}'\Delta_{\bm{r}}\left(\frac{\bm{a}(\bm{r}')}{|\bm{r}'-\bm{r}|}\right)\\
+&\overset{(6)}{=}\int_{V}\upd^3\bm{r}'\delta(\bm{r}'-\bm{r})\bm{a}(\bm{r}')-\frac{1}{4\pi}\nabla_{\bm{r}}\int_{V}\upd^3\bm{r}'\bm{a}(\bm{r}')\cdot\nabla_{\bm{r}'}\left(\frac{1}{|\bm{r}'-\bm{r}|}\right)\\
+&\overset{(4)}{=}\bm{a}(\bm{r})-\frac{1}{4\pi}\nabla_{\bm{r}}\int_{V}\upd^3\bm{r}'\nabla_{\bm{r}'}\cdot\left(\frac{\bm{a}(\bm{r}')}{|\bm{r}'-\bm{r}|}\right)+\frac{1}{4\pi}\nabla_{\bm{r}}\int_{V}\upd^3\bm{r}'\frac{\nabla_{\bm{r}'}\cdot\bm{a}(\bm{r}')}{|\bm{r}'-\bm{r}|}\\
+&=\bm{a}(\bm{r})-\frac{1}{4\pi}\nabla_{\bm{r}}\int_{S}\upd\bm{f}'\cdot\left(\frac{\bm{a}(\bm{r}')}{|\bm{r}'-\bm{r}|}\right)+\frac{1}{4\pi}\nabla_{\bm{r}}\int_{S}\upd^3\bm{r}'\frac{\nabla_{\bm{r}'}\cdot\bm{a}(\bm{r}')}{|\bm{r}'-\bm{r}|}\\
+&\underset{V\to\mathbb{R}^3}{\overset{(1)(2)}{=}}\bm{a}(\bm{r})-\bm{a}_{l}(\bm{r}),
+\end{aligned}
+$$
+又因为
+$$
+\begin{aligned}
+\frac{1}{4\pi}\nabla_{\bm{r}}\times\nabla_{\bm{r}}\times\int_{V}\upd^3\bm{r}'\frac{\bm{a}(\bm{r}')}{|\bm{r}-\bm{r}'|}&\overset{(5)}{=}-\frac{1}{4\pi}\nabla_{\bm{r}}\times\int_{V}\upd^3\bm{r}'\bm{a}(\bm{r}')\times\nabla_{\bm{r}}\left(\frac{1}{|\bm{r}'-\bm{r}|}\right)\\
+&=\frac{1}{4\pi}\nabla_{\bm{r}}\times\int_{V}\upd^3\bm{r}'\bm{a}(\bm{r}')\times\nabla_{\bm{r}'}\left(\frac{1}{|\bm{r}'-\bm{r}|}\right)\\
+&\overset{(5)}{=}-\frac{1}{4\pi}\nabla_{\bm{r}}\times\int_{V}\upd^3\bm{r}'\nabla_{\bm{r}'}\times\left(\frac{\bm{a}(\bm{r}')}{|\bm{r}'-\bm{r}|}\right)+\frac{1}{4\pi}\nabla_{\bm{r}}\times\int_{V}\upd^3\bm{r}'\frac{\nabla_{\bm{r}'}\times\bm{a}(\bm{r}')}{|\bm{r}'-\bm{r}|}\\
+&\overset{(7)}{=}-\frac{1}{4\pi}\nabla_{\bm{r}}\times\int_{S}\upd\bm{f}'\times\left(\frac{\bm{a}(\bm{r}')}{|\bm{r}'-\bm{r}|}\right)+\frac{1}{4\pi}\nabla_{\bm{r}}\times\int_{V}\upd^3\bm{r}'\frac{\nabla_{\bm{r}'}\times\bm{a}(\bm{r}')}{|\bm{r}'-\bm{r}|}\\
+&\underset{V\to\mathbb{R}^3}{\overset{(1)(2)}{=}}\bm{a}_{t}(\bm{r}),
+\end{aligned}
+$$
+故
+$$
+    \bm{a}(\bm{r})=\bm{a}_{l}(\bm{r})+\bm{a}_{t}(\bm{r}).
+$$
+\par在(1)的条件下也有矢量的唯一性定理：已知矢量的散度和旋度，则该矢量可唯一确定
+$$
+\leftBrace
+&\nabla\cdot\bm{a}_{1}(\bm{r})=\nabla\cdot\bm{a}_{2}(\bm{r})\\
+&\nabla\times\bm{a}_{1}(\bm{r})=\nabla\times\bm{a}_{2}(\bm{r})
+\rightEnd\Longrightarrow\bm{a}_{1}(\bm{r})=\bm{a}_{2}(\bm{r}).
+$$
+证明过程用到格林第一等式
+$$
+\begin{equation}
+\int_{S}\upd\bm{f}\cdot\psi\nabla\psi=\int_{V}\upd^3\bm{r}\nabla\cdot(\psi\nabla\psi)\overset{(4)}{=}\int_{V}\upd^3\bm{r}[\Delta\psi+(\nabla\psi)^2],
+\end{equation}
+$$
+设$\bm{d}(\bm{r})=\bm{a}_{1}(\bm{r})-\bm{a}_{2}(\bm{r})$,由$\nabla\cdot\bm{d}(\bm{r})=0$可设$\bm{d}(\bm{r})=\nabla\psi$，那么$\Delta\psi=0$
+$$
+\int_{S}\upd\bm{f}\cdot\psi\nabla\psi\overset{(8)}{=}\int_{V}\upd^3\bm{r}(\nabla\psi)^2\overset{V\to\mathbb{R}^3}{\Longrightarrow}\int_{V}\upd^3\bm{r}(\nabla\psi)^2=0\Longleftrightarrow\bm{d}(\bm{r})=\nabla\psi=\bm{0},
+$$
+故$\bm{a}_{1}(\bm{r})=\bm{a}_{2}(\bm{r})$.
+## 决定静磁场需要几个方程？
+\par电场强度衰减符合(1)的条件，因此在无界区域问题中
+$$
+\leftBrace
+&\nabla\cdot\bm{E}(\bm{r})=\frac{\rho}{\varepsilon_{0}}\\
+&\nabla\times\bm{E}(\bm{r})=-\part{\bm{B}}{t}
+\rightEnd\overset{(2)}{\Longrightarrow}\bm{E}(\bm{r})=\nabla_{\bm{r}}\left(-\frac{1}{4\pi\varepsilon_{0}}\int_{V}\upd^3\bm{r}'\frac{\rho(\bm{r}')}{|\bm{r}'-\bm{r}|}\right)+\nabla_{\bm{r}}\times\left(-\int_{V}\upd^3\bm{r}'\frac{\partial\bm{B}/\partial t}{|\bm{r}'-\bm{r}|}\right).
+$$
+需要四个方程(1+3).
