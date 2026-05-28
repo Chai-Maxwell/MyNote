@@ -126,7 +126,7 @@ $$
 
 $$
 \begin{equation}
-\nabla\times\bm{H}=\bm{J}\_{f}.
+\nabla\times\bm{H}=\bm{J}_{f}.
 \end{equation}
 $$
 
@@ -162,7 +162,7 @@ $$
 
 $$
 \begin{equation}
-\nabla\times\bm{H}=\bm{J}\_{f}+\frac{\partial \bm{D}}{\partial t}.
+\nabla\times\bm{H}=\bm{J}_{f}+\frac{\partial \bm{D}}{\partial t}.
 \end{equation}
 $$
 

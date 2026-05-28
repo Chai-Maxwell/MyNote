@@ -2,7 +2,7 @@
 /*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
 .markdown-body {
   background-color: rgba(255, 255, 255, 0.85);
-  font-family: "Times New Roman", "STFangsong";
+  font-family: "Times New Roman", "SIL-Kai-Reg-Jian";
   font-weight: normal;
   color: #1a1a1a;
   counter-reset: h2-counter;
@@ -14,7 +14,7 @@
   /* 各种语法元素的高亮 */
 }
 .markdown-body h1 {
-  font-family: "STKaiti", "Times New Roman";
+  font-family: "BigCaslon-Medium", "STKaiti";
   font-size: 2.2em;
   font-weight: normal;
   margin-top: 0em;
@@ -24,7 +24,7 @@
   color: #1a1a1a;
 }
 .markdown-body h2 {
-  font-family: "Times New Roman", "STKaiti";
+  font-family: "BigCaslon-Medium", "STKaiti";
   counter-reset: h3-counter h4-counter;
   font-family: "STKaiti";
   font-size: 1.8em;
@@ -36,14 +36,14 @@
   color: #1a1a1a;
 }
 .markdown-body h2:before {
-  font-family: "Times New Roman";
+  font-family: "BigCaslon-Medium";
   counter-increment: h2-counter;
   content: "§" counter(h2-counter) " ";
   font-weight: normal;
   color: #dcb48c;
 }
 .markdown-body h3 {
-  font-family: "Times New Roman", "STKaiti";
+  font-family: "BigCaslon-Medium", "STKaiti";
   counter-reset: h4-counter;
   font-size: 1.4em;
   font-weight: normal;
@@ -54,14 +54,14 @@
   color: #1a1a1a;
 }
 .markdown-body h3:before {
-  font-family: "Times New Roman";
+  font-family: "BigCaslon-Medium";
   counter-increment: h3-counter;
   content: "§" counter(h2-counter) "." counter(h3-counter) " ";
   font-weight: normal;
   color: #dcb48c;
 }
 .markdown-body h4 {
-  font-family: "Times New Roman", "STKaiti";
+  font-family: "BigCaslon-Medium", "STKaiti";
   font-size: 1em;
   font-weight: normal;
   margin-top: 1.2em;
@@ -70,7 +70,7 @@
   color: #1a1a1a;
 }
 .markdown-body h4:before {
-  font-family: "Times New Roman";
+  font-family: "BigCaslon-Medium";
   counter-increment: h4-counter;
   content: "§" counter(h2-counter) "." counter(h3-counter) "."
     counter(h4-counter) " ";
@@ -78,7 +78,7 @@
   color: #dcb48c;
 }
 .markdown-body em {
-  font-family: "Times New Roman", "STFangsong";
+  font-family: "BigCaslon-Medium", "STFangsong";
   font-style: italic;
   color: #1a1a1a;
 }

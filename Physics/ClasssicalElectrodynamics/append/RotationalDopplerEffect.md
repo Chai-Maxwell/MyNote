@@ -1,4 +1,4 @@
-# 旋转多普勒效应
+# 参考系变换是否会改变慢光效应的发生与否？
 
 ## 线性多谱勒效应
 
@@ -12,8 +12,15 @@ k^{\mu}|_{K}=\Lambda^{\mu}_{\nu}(\bm{v})k^{\nu}|_{K_{0}},
 $$
 即
 $$
-\omega|_{K}=\gamma(\omega|_{K_0}+\bm{v}\cdot\bm{k}).  
+\omega|_{K}=\gamma(\omega|_{K_0}+\bm{v}\cdot\bm{k}|_{K_{0}}).  
 $$
 这是线性*Doppler*效应.
 
-## a
+## 线性多普勒效应如何影响群速度？
+\[\begin{aligned}
+    \bm{v}_{g}|_{K}&=\left.\deri{\omega}{\bm{k}}\right|_{K}=\deri{\omega|_{K}}{k^{j}|_{K_{0}}}\deri{k^{j}|_{K_{0}}}{k^{i}|_{K}}\hat{\bm{e}}_{i}\\
+    &=\gamma\left[(v_{g}|_{K_{0}})_{j}+v_{j}\right]\Lambda^{j}_{i}(-\bm{v})\\
+    &=\gamma\left[(v_{g}|_{K_{0}})_{j}+v_{j}\right]\left(\delta^{ij}+\dfrac{\gamma^2}{1+\gamma}\dfrac{v^{i}v^{j}}{c^2}\right)\hat{\bm{e}}_{i}\\
+    &=\gamma\left\{\bm{v}_{g}|_{K_{0}}+\bm{v}
+    +\frac{\gamma^2}{1+\gamma}[(\bm{v}_{g}|_{K_{0}}+\bm{v})\cdot\bm{\beta}]\bm{\beta}\right\},
+\end{aligned}\]
