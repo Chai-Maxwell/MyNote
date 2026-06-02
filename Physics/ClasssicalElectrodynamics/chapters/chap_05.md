@@ -138,7 +138,7 @@ $$
 $$
 \begin{aligned}
 \Psi(\bm{r},t)&=\int_{t_{1}}^{t_{2}}\mathrm{d} t\int_{\Sigma}\mathrm{d}^3\bm{r}'G(\bm{r},t|\bm{r}',t')f(\bm{r}',t')\\
-&\quad+\frac{1}{c^2}\int_{\Sigma}\mathrm{d}^3\bm{r}'\left.\left[\frac{\partial }{\partial t'}G(\bm{r},t|\bm{r}',t')\Psi(\bm{r}',t')-G(\bm{r},t|\bm{r}',t')\frac{\partial }{\partial t'}\Psi(\bm{r}',t')\right]\right|_{t'=t_{1}}^{t\_{2}}.
+&\quad+\frac{1}{c^2}\int_{\Sigma}\mathrm{d}^3\bm{r}'\left.\left[\frac{\partial }{\partial t'}G(\bm{r},t|\bm{r}',t')\Psi(\bm{r}',t')-G(\bm{r},t|\bm{r}',t')\frac{\partial }{\partial t'}\Psi(\bm{r}',t')\right]\right|_{t'=t_{1}}^{t_{2}}.
 \end{aligned}
 $$
 
@@ -170,7 +170,7 @@ $$
 
 $$
 \begin{equation}
-\Psi(\bm{r},t)=\frac{1}{4\pi}\int\_{\{\bm{r}'|f\neq0\}}\mathrm{d}^3\bm{r}'\frac{f(\bm{r}',t-\|\bm{r}-\bm{r}'\|/c)}{\|\bm{r}-\bm{r}'\|}.
+\Psi(\bm{r},t)=\frac{1}{4\pi}\int_{\{\bm{r}'|f\neq0\}}\mathrm{d}^3\bm{r}'\frac{f(\bm{r}',t-\|\bm{r}-\bm{r}'\|/c)}{\|\bm{r}-\bm{r}'\|}.
 \end{equation}
 $$
 
@@ -309,7 +309,7 @@ $$
 
 $$
 \begin{aligned}
-\nabla_{\bm{r}'}\cdot\bm{J}_{f}(\bm{r}',t_{\text{rad}})&=[\nabla_{\bm{r}'}\cdot\bm{J}_{f}(\bm{r}',t')]|_{t'=t\_{\text{rad}}}+\frac{\partial \bm{J}_{f}}{\partial t}\cdot\frac{\hat{\bm{r}}}{c}\\
+\nabla_{\bm{r}'}\cdot\bm{J}_{f}(\bm{r}',t_{\text{rad}})&=[\nabla_{\bm{r}'}\cdot\bm{J}_{f}(\bm{r}',t')]|_{t'=t_{\text{rad}}}+\frac{\partial \bm{J}_{f}}{\partial t}\cdot\frac{\hat{\bm{r}}}{c}\\
 &=-\frac{\partial \rho_{f}}{\partial t}+\frac{\partial \bm{J}_{f}}{\partial t}\cdot\frac{\hat{\bm{r}}}{c},
 \end{aligned}
 $$
@@ -336,7 +336,7 @@ $$
 说明辐射场表现为TEM波，其功率角分布
 
 $$
-\frac{\mathrm{d}P}{\mathrm{d}\Omega}=\frac{r^2}{\mu_{0}}|\bm{E}_{\text{rad}}\times\bm{B}\_{\text{rad}}|=\frac{1}{c\mu_{0}}\left|\bm{r}\times\frac{\partial \bm{A}^{(\text{L})}_{\text{rad}}}{\partial t}\right|^2.
+\frac{\mathrm{d}P}{\mathrm{d}\Omega}=\frac{r^2}{\mu_{0}}|\bm{E}_{\text{rad}}\times\bm{B}_{\text{rad}}|=\frac{1}{c\mu_{0}}\left|\bm{r}\times\frac{\partial \bm{A}^{(\text{L})}_{\text{rad}}}{\partial t}\right|^2.
 $$
 
 ### *Larmor*公式
@@ -362,7 +362,7 @@ $$
 或
 
 $$
-P=\frac{1}{4\pi\varepsilon\_{0}}\frac{2q^2|\bm{a}\_{\text{rad}}|^2}{3c^3}.
+P=\frac{1}{4\pi\varepsilon_{0}}\frac{2q^2|\bm{a}_{\text{rad}}|^2}{3c^3}.
 $$
 
 ### 频域中的辐射场
@@ -370,7 +370,7 @@ $$
 ¶利用*Fourier*变换（约定时域上正变换用$\mathrm{e}^{\mathrm{i}\omega t}$，下文空域上正变换用$\mathrm{e}^{-\mathrm{i}\bm{k}\cdot\bm{r}}$，$1/2\pi$的因子均分配给逆变换）的性质
 
 $$
-\mathcal{F}[f(t-t\_{0})](\omega)=\mathrm{e}^{\mathrm{i}\omega t_{0}}\mathcal{F}[f(t)](\omega),
+\mathcal{F}[f(t-t_{0})](\omega)=\mathrm{e}^{\mathrm{i}\omega t_{0}}\mathcal{F}[f(t)](\omega),
 $$
 
 得到
@@ -380,7 +380,7 @@ $$
 \bm{A}_{\text{rad}}^{(\text{L})}(\bm{r}|\omega)&=\mathcal{F}[\bm{A}_{\text{rad}}^{(\text{L})}(\bm{r},t)]\\
 &=\frac{\mu_{0}}{4\pi r}\int\mathrm{d}^3\bm{r}'\mathcal{F}[\bm{J}_{f}(\bm{r}',t_{\text{rad}})]\\
 &=\frac{\mu_{0}}{4\pi}\frac{\mathrm{e}^{\mathrm{i} kr}}{r}\int\mathrm{d}^3\bm{r}'\bm{J}_{f}(\bm{r}'|\omega)\mathrm{e}^{-\mathrm{i} k\hat{\bm{r}}\cdot\bm{r}'}\\
-&=\frac{\mu_{0}}{4\pi}\frac{\mathrm{e}^{\mathrm{i} kr}}{r}\bm{J}_{f}(k\hat{\bm{r}}|\omega)
+&=\frac{\mu_{0}}{4\pi}\frac{\mathrm{e}^{\mathrm{i} kr}}{r}\bm{J}_{f}(k\hat{\bm{r}}|\omega),
 \end{aligned}
 $$
 
