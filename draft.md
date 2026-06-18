@@ -686,3 +686,135 @@ $$
 ```
 finish the multiply table of D4
 ```
+
+## 2026.6.18
+
+¶正则方程
+
+$$
+\begin{aligned}
+\delta S&=\int_{t_1}^{t_2}\mathrm{d}t\,\left(p_{j}\delta\dot{q}^{j}+\dot{q}^{j}\delta p_{j}-\frac{\partial H}{\partial q^{j}}\delta q^{j}-\frac{\partial H}{\partial p_{j}}\delta p_{j}\right)\\
+&=\int_{t_1}^{t_2}\mathrm{d}t\,\left[\left(-\dot{p}_{j}-\frac{\partial H}{\partial q^{j}}\right)\delta q^{j}+\left(\dot{q}^{j}-\frac{\partial H}{\partial p_{j}}\right)\delta p_{j}\right]+p_{j}\delta q^{j}|_{t_1}^{t_2},
+\end{aligned}
+$$
+
+$$
+\left\{\begin{aligned} &\dot{q}^{j}=[q^{j},H],\\
+&\dot{p}_{j}=[p_{j},H],\end{aligned}\right.
+\Longleftrightarrow\dot{\xi}^{j}=\omega_{jk}\partial_{k}H.
+$$
+
+¶正则变换
+
+考虑点变换
+
+$$
+Q^{j}=Q^{j}(q^{k},p_{k},t),\ P_{j}=P_{j}(q^{k},p_{k},t),
+$$
+
+有
+
+$$
+\dot{Q}^{j}=\frac{\partial Q^{j}}{\partial t}+[Q^{j},H]_{qp},\ \dot{P}_{j}=\frac{\partial P_{j}}{\partial t}+[P_{j},H]_{qp},
+$$
+
+若变换是正则的，则应存在新的Hamilton函数$K(Q,P,t)$，使得新变量也满足正则方程：
+
+$$
+\dot{Q}^{j}=[Q^{j},K]_{QP}=\frac{\partial K}{\partial P_{j}},\quad
+\dot{P}_{j}=[P_{j},K]_{QP}=-\frac{\partial K}{\partial Q^{j}}.
+$$
+
+记$\xi=(\bm{q},\bm{p}),\ \Xi=(\bm{Q},\bm{P})$，正则方程可统一写为
+
+$$
+\dot{\xi}^{j}=\omega^{jk}\frac{\partial H}{\partial\xi^{k}},\quad
+\dot{\Xi}^{j}=\omega^{jk}\frac{\partial K}{\partial\Xi^{k}},
+$$
+
+其中$\omega=\begin{pmatrix}0&I\\-I&0\end{pmatrix}$是辛矩阵。另一方面，
+
+$$
+\dot{\Xi}^{j}=\frac{\partial\Xi^{j}}{\partial\xi^{k}}\dot{\xi}^{k}+\frac{\partial\Xi^{j}}{\partial t}
+=M^{j}_{\ k}\omega^{kl}\frac{\partial H}{\partial\xi^{l}}+\frac{\partial\Xi^{j}}{\partial t},
+$$
+
+其中$M^{j}_{\ k}=\partial\Xi^{j}/\partial\xi^{k}$是Jacobi矩阵。又
+
+$$
+\frac{\partial H}{\partial\xi^{l}}=\frac{\partial H}{\partial\Xi^{m}}\frac{\partial\Xi^{m}}{\partial\xi^{l}}=(M^{T})_{l}^{\ m}\frac{\partial H}{\partial\Xi^{m}},
+$$
+
+代入得
+
+$$
+\dot{\Xi}^{j}=(M\omega M^{T})^{jm}\frac{\partial H}{\partial\Xi^{m}}+\frac{\partial\Xi^{j}}{\partial t}.
+$$
+
+与$\dot{\Xi}^{j}=\omega^{jk}\partial K/\partial\Xi^{k}$比较。由于这对任意$H$成立，$\partial H/\partial\Xi$的系数必须匹配：
+
+$$
+\boxed{M\omega M^{T}=\omega}.
+$$
+
+此即正则变换的辛条件（symplectic condition）。此时由
+
+$$
+\frac{\partial\Xi^{j}}{\partial t}=\omega^{jk}\frac{\partial}{\partial\Xi^{k}}(K-H)
+$$
+
+确定$K$（若变换不显含时，则$K=H$）。
+
+辛条件等价于基本Poisson括号的保持。直接计算：
+
+$$
+[\Xi^{j},\Xi^{k}]_{qp}=M^{j}_{\ l}\omega^{lm}M^{k}_{\ m}=(M\omega M^{T})^{jk}=\omega^{jk},
+$$
+
+即
+
+$$
+\boxed{[Q^{j},Q^{k}]_{qp}=0,\quad[P_{j},P_{k}]_{qp}=0,\quad[Q^{j},P_{k}]_{qp}=\delta^{j}_{k}}.
+$$
+
+也可从变分原理得到等价表述。正则变换要求
+
+$$
+\delta\int_{t_1}^{t_2}(p_{j}\dot{q}^{j}-H)\mathrm{d}t=0\Longleftrightarrow\delta\int_{t_1}^{t_2}(P_{j}\dot{Q}^{j}-K)\mathrm{d}t=0,
+$$
+
+故被积函数之差为全微分：
+
+$$
+p_{j}\mathrm{d}q^{j}-H\mathrm{d}t=P_{j}\mathrm{d}Q^{j}-K\mathrm{d}t+\mathrm{d}F.
+$$
+
+$F$称为生成函数（generating function）。取$F=F_{1}(q,Q,t)$，展开
+
+$$
+\mathrm{d}F_{1}=\frac{\partial F_{1}}{\partial q^{j}}\mathrm{d}q^{j}+\frac{\partial F_{1}}{\partial Q^{j}}\mathrm{d}Q^{j}+\frac{\partial F_{1}}{\partial t}\mathrm{d}t,
+$$
+
+比较系数得
+
+$$
+\boxed{p_{j}=\frac{\partial F_{1}}{\partial q^{j}},\quad P_{j}=-\frac{\partial F_{1}}{\partial Q^{j}},\quad K=H+\frac{\partial F_{1}}{\partial t}}.
+$$
+
+通过Legendre变换可得其他类型的生成函数。例如
+
+$$
+F_{2}(q,P,t)=F_{1}+P_{j}Q^{j},\quad
+F_{3}(p,Q,t)=F_{1}-p_{j}q^{j},\quad
+F_{4}(p,P,t)=F_{1}+P_{j}Q^{j}-p_{j}q^{j},
+$$
+
+分别给出
+
+$$
+\begin{aligned}
+&F_{2}:&& p_{j}=\frac{\partial F_{2}}{\partial q^{j}},\quad Q^{j}=\frac{\partial F_{2}}{\partial P_{j}},\quad K=H+\frac{\partial F_{2}}{\partial t},\\
+&F_{3}:&& q^{j}=-\frac{\partial F_{3}}{\partial p_{j}},\quad P_{j}=-\frac{\partial F_{3}}{\partial Q^{j}},\quad K=H+\frac{\partial F_{3}}{\partial t},\\
+&F_{4}:&& q^{j}=-\frac{\partial F_{4}}{\partial p_{j}},\quad Q^{j}=\frac{\partial F_{4}}{\partial P_{j}},\quad K=H+\frac{\partial F_{4}}{\partial t}.
+\end{aligned}
+$$
