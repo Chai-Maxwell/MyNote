@@ -11,6 +11,7 @@ $$
 $$
 
 其中$Q_f$是自由电荷，$Q_p$是束缚电荷，$\rho$表示相应的电荷密度.
+
 ¶对于束缚电荷，考察穿出面积元$\mathrm{d}\bm{f}$的正电荷
 
 $$
@@ -27,7 +28,7 @@ $$
 
 $$
 \begin{equation}
-\nabla\cdot\bm{D}=\rho\_{f}.
+\nabla\cdot\bm{D}=\rho_{f}.
 \end{equation}
 $$
 

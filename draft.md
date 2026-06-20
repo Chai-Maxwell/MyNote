@@ -818,3 +818,33 @@ $$
 &F_{4}:&& q^{j}=-\frac{\partial F_{4}}{\partial p_{j}},\quad Q^{j}=\frac{\partial F_{4}}{\partial P_{j}},\quad K=H+\frac{\partial F_{4}}{\partial t}.
 \end{aligned}
 $$
+
+## $\varepsilon$analysis
+
+### multicative error
+
+$$
+a_{r}=\mathrm{fl}(b)*\mathrm{fl}(c)=b(1+\varepsilon_{b})*c(1+\varepsilon_{c})=bc(1+\varepsilon_{b}+\varepsilon_{c}),
+$$
+
+$$
+\mathrm{fl}(a_{r})=bc(1+\varepsilon_{b}+\varepsilon_{c})(1+\varepsilon_{m})=bc(1+\varepsilon_{m}+\varepsilon_{b}+\varepsilon_{c}),
+$$
+
+$$
+\varepsilon_{a}=(\mathrm{fl}(a_r)-a)/a=\varepsilon_{m}+\varepsilon_{b}+\varepsilon_{c}.
+$$
+
+### substractive error
+
+$$
+a_{r}=\mathrm{fl}(b)-\mathrm{fl}(c)=(b-c)+(b\varepsilon_{b}-c\varepsilon_{c}),
+$$
+
+$$
+\mathrm{fl}(a_r)=a_r+a_r\varepsilon_{s},
+$$
+
+$$
+\varepsilon_{a}=(\mathrm{fl}(a_r)-a)/a=\varepsilon_{s}+\frac{b\varepsilon_{b}-c\varepsilon_{c}}{a}.
+$$
