@@ -60,7 +60,7 @@ $$
 在无界自由空间中$\rho_{f}=0,\ \bm{J}_{f}=\bm{0}$得到时谐波解
 
 $$
-\tilde{\bm{A}}^{(\text{L})}=\tilde{\bm{A}}^{(\text{L})}\_{0}\mathrm{e}^{-\mathrm{i}(\omega t-\bm{k}\cdot\bm{r})},\quad\tilde{\varphi}^{(\text{L})}=\tilde{\varphi}^{(\text{L})}_{0}\mathrm{e}^{-\mathrm{i}(\omega t-\bm{k}\cdot\bm{r})},
+\tilde{\bm{A}}^{(\text{L})}=\tilde{\bm{A}}^{(\text{L})}_{0}\mathrm{e}^{-\mathrm{i}(\omega t-\bm{k}\cdot\bm{r})},\quad\tilde{\varphi}^{(\text{L})}=\tilde{\varphi}^{(\text{L})}_{0}\mathrm{e}^{-\mathrm{i}(\omega t-\bm{k}\cdot\bm{r})},
 $$
 
 其中$\bm{k}=\frac{\omega}{c}\hat{\bm{e}}_{k}$，*Lorenz*规范约束$\tilde{\varphi}^{(\text{L})}_{0}=\frac{c^2}{\omega}\bm{k}\cdot\tilde{\bm{A}}^{(\text{L})}_{0}$，进而解得
@@ -326,11 +326,13 @@ $$
 ¶由以上推导
 
 $$
+\boxed{
 \begin{aligned}
 &c\bm{B}_{\text{rad}}(\bm{r},t)=-\hat{\bm{r}}\times\frac{\partial \bm{A}^{(\text{L})}_{\text{rad}}}{\partial t},\\
 &\bm{E}_{\text{rad}}(\bm{r},t)=-\hat{\bm{r}}\times c\bm{B}_{\text{rad}}(\bm{r},t),\\
 &c\bm{B}_{\text{rad}}(\bm{r},t)=\hat{\bm{r}}\times\bm{E}_{\text{rad}},
 \end{aligned}
+}
 $$
 
 说明辐射场表现为TEM波，其功率角分布
@@ -414,7 +416,8 @@ $$
 \bm{J}_{f}(\bm{r}',t_{\text{rad}})=\sum_{k=0}^{\infty}\frac{1}{k!}\left(\frac{\hat{\bm{r}}\cdot\bm{r}'}{c}\right)^{k}\frac{\partial ^k}{\partial t^k}\bm{J}_{f}(\bm{r}',t-r/c),
 $$
 
-以上展开在源的特征长度较短或源振荡周期较长的情况下合法.
+以上展开在源的特征长度较短或源振荡周期较长的情况下（远场条件）合法.
+
 ¶观察辐射矢量展开中$k=0$的电偶极子项
 
 $$

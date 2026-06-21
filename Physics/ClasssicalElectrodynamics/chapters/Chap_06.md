@@ -12,7 +12,7 @@ $$
 
 若$\Delta s_{AB}^2=0$称为类光间隔(light-like separation)或零间隔(null separation)，$\Delta s_{AB}^2>0$称为类时间隔(time-like separation)，$\Delta s_{AB}^2<0$称为类空间隔(space-like separation).描述真实发生的世界线常用光锥概念：时间线只能在类时区域（光锥）内部或边界上（分别对应亚光速粒子和光子）.
 
-<figure class="image-round" style="--image-width:40%">
+<figure class="image-round" style="--image-width:25%">
   <img src="../figurebank/image_Chap06_1.png">
   <figcaption>
   
