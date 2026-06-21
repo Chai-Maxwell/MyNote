@@ -34,7 +34,7 @@ $$
 
 $$
 \begin{equation}
-\tilde{\bm{E}}(\bm{r})=\mathrm{i} v_{p}\frac{\nabla}{k}\times\tilde{\bm{B}}(\bm{r}),\quad\tilde{\bm{B}}(\bm{r})=\frac{1}{\mathrm{i} v\_{p}}\frac{\nabla}{k}\times\tilde{\bm{E}}(\bm{r}).
+\tilde{\bm{E}}(\bm{r})=\mathrm{i} v_{p}\frac{\nabla}{k}\times\tilde{\bm{B}}(\bm{r}),\quad\tilde{\bm{B}}(\bm{r})=\frac{1}{\mathrm{i} v_{p}}\frac{\nabla}{k}\times\tilde{\bm{E}}(\bm{r}).
 \end{equation}
 $$
 
@@ -67,7 +67,7 @@ $$
 &s_{0}=|\tilde{E}_{01}|^2+|\tilde{E}_{02}|^2,\\
 &s_{1}=|\tilde{E}_{01}|^2-|\tilde{E}_{02}|^2,\\
 &s_{2}=2|\tilde{E}_{01}||\tilde{E}_{02}|\cos(\delta_{1}-\delta_{2}),\\
-&s_{3}=2|\tilde{E}_{01}||\tilde{E}_{02}|\sin(\delta_{1}-\delta\_{2}),
+&s_{3}=2|\tilde{E}_{01}||\tilde{E}_{02}|\sin(\delta_{1}-\delta_{2}),
 \end{aligned}\right.
 $$
 
@@ -132,7 +132,7 @@ $$
 \end{aligned}
 $$
 
-其中$\mathcal{T}_{0}=-\tilde{\bm{D}}_{0}\tilde{\bm{E}}_{0}-\tilde{\bm{B}}_{0}\tilde{\bm{H}}_{0}+\frac{1}{2}(\tilde{\bm{D}}_{0}\cdot\tilde{\bm{E}}_{0}+\tilde{\bm{B}}_{0}\cdot\tilde{\bm{H}}_{0})\mathcal{I}$，$^{C_{2}}$表示对张量的第二个位置取复共轭.且有关系$\operatorname{Tr}(\mathcal{T}\_{0})=w$.
+其中$\mathcal{T}_{0}=-\tilde{\bm{D}}_{0}\tilde{\bm{E}}_{0}-\tilde{\bm{B}}_{0}\tilde{\bm{H}}_{0}+\frac{1}{2}(\tilde{\bm{D}}_{0}\cdot\tilde{\bm{E}}_{0}+\tilde{\bm{B}}_{0}\cdot\tilde{\bm{H}}_{0})\mathcal{I}$，$^{C_{2}}$表示对张量的第二个位置取复共轭.且有关系$\operatorname{Tr}(\mathcal{T}_{0})=w$.
 
 ## 电磁波在介质分界面处的反射与折射
 
@@ -193,7 +193,7 @@ $$
 &E^{(\text{r})}_{p}=\frac{\tan(\theta_{i}-\theta_{t})}{\tan(\theta_{i}+\theta_{t})}E^{(\text{i})}_{p},\\
 &E^{(\text{r})}_{s}=\frac{\sin(\theta_{t}-\theta_{{i}})}{\sin(\theta_{t}+\theta_{{i}})}E^{(\text{i})}_{s},\\
 &E^{(\text{t})}_{p}=\frac{2\cos\theta_{i}\sin\theta_{t}}{\sin(\theta_{i}+\theta_{t})\cos(\theta_{i}-\theta_{t})}E^{(\text{i})}_{p},\\
-&E^{(\text{t})}_{s}=\frac{2\cos\theta_{i}\sin\theta_{t}}{\sin(\theta_{i}+\theta_{t})}E^{(\text{i})}\_{s}.
+&E^{(\text{t})}_{s}=\frac{2\cos\theta_{i}\sin\theta_{t}}{\sin(\theta_{i}+\theta_{t})}E^{(\text{i})}_{s}.
 \end{aligned}
 \end{equation}
 $$
@@ -238,6 +238,7 @@ $$
 $$
 
 此时有非平凡的解，非磁性介质不符合此条件.
+
 ¶由(3)式可知$Z_{1}\cos\theta_{i}^{(\text{B})}=Z_{2}\cos\theta_{t}$时反射光无p分量，结合折射定律
 
 $$
@@ -247,10 +248,10 @@ $$
 即
 
 $$
-\tan^2\theta_{i}^{(\text{E})}=\frac{(Z_{1}/Z_{2})^{2}-1}{1-(n_{1}/n_{2})^{2}}>0,
+\tan^2\theta_{i}^{(\text{B})}=\frac{(Z_{1}/Z_{2})^{2}-1}{1-(n_{1}/n_{2})^{2}}>0,
 $$
 
-对于非磁性介质$\tan\theta_{i}^{(\text{B})}=n_{2}/n_{1}$，$\theta_{i}^{(\text{B})}$为*Brewster*角.
+对于非磁性介质$\sin\theta_{i}^{(\text{B})}=n_{2}/n_{1}$，$\theta_{i}^{(\text{B})}$为*Brewster*角.
 
 ### 倏逝波
 
@@ -272,7 +273,7 @@ $$
 \bm{E}^{(\text{r})}=\tilde{E}^{(\text{t})}\exp[{-\mathrm{i}(\omega t-\bm{k}^{(\text{t})}\cdot\bm{r})}]=[\tilde{E}^{(\text{t})}\mathrm{e}^{\kappa(\theta_{i})z}]\exp[-\mathrm{i}(\omega t-k^{(\text{i})}\sin\theta_{i}x)],
 $$
 
-折射波有沿$-\hat{\bm{e}}_{z}$方向指数衰减的特点，称为倏逝波.取$1/e$振幅时$z=\kappa^{-1}$为穿透深度，则发生全反射还应要求折射介质厚度大于$\kappa^{-1}$，否则发生光学隧穿.
+折射波有沿$-\hat{\bm{e}}_{z}$方向指数衰减的特点，称为倏逝波.取$1/e$振幅时$|z|=\kappa^{-1}$为穿透深度，则发生全反射还应要求折射介质厚度大于$\kappa^{-1}$，否则发生光学隧穿.
 
 ## 电磁波的色散
 
@@ -395,7 +396,7 @@ $$
 \varepsilon_{r}=\frac{P}{\varepsilon_{0}E}=\frac{-Nex}{\varepsilon_{0}E}=\frac{Ne^2/\varepsilon_{0}m}{\omega_{0}^2-\omega^2-\mathrm{i}\gamma\omega}\equiv\frac{\omega_{p}^2}{\omega_{0}^2-\omega^2-\mathrm{i}\gamma\omega},
 $$
 
-称$\omega_{0}$为材料谐振本证频率，$\omega\_{p}$为材料的体等离子频率，$\gamma$为阻尼系数.
+称$\omega_{0}$为材料谐振本证频率，$\omega_{p}$为材料的体等离子频率，$\gamma$为阻尼系数.
 
 #### *Drude*模型
 
@@ -420,7 +421,7 @@ $$
 得到
 
 $$
-\varepsilon_{r}=\frac{\varepsilon_{\text{eff}}}{\varepsilon_{0}}=1-\frac{\omega\_{p}^2}{\omega^2+\mathrm{i}\gamma\omega}.
+\varepsilon_{r}=\frac{\varepsilon_{\text{eff}}}{\varepsilon_{0}}=1-\frac{\omega_{p}^2}{\omega^2+\mathrm{i}\gamma\omega}.
 $$
 
 ### 金属导体的穿透深度
@@ -528,7 +529,16 @@ $$
 \end{equation}
 $$
 
-这说明$k_{t}\neq0$时波导不支持TEM(Transverse ElectroMagnetic)导模.$k_{t}=0$时设TEM模存在，得到$\nabla\times\tilde{\bm{E}}(x,y)=0$，则引入标量场$\tilde{\varphi}(x,y)$，其满足*Laplace*方程
+或
+
+$$
+\boxed{\left\{\begin{aligned}
+\tilde{\bm{E}}_{\perp}&=\frac{\mathrm{i} k_{z}}{k_{t}^2}\nabla_{\perp}E_{z}-\frac{\mathrm{i}\omega\mu}{k_{t}^2}\hat{\bm{z}}\times\nabla_{\perp}H_{z},\\
+\tilde{\bm{H}}_{\perp}&=\frac{\mathrm{i} k_{z}}{k_{t}^2}\nabla_{\perp}H_{z}+\frac{\mathrm{i}\omega\varepsilon}{k_{t}^2}\hat{\bm{z}}\times\nabla_{\perp}E_{z},
+\end{aligned}\right.}
+$$
+
+这说明$k_{t}\neq0$时波导不支持TEM(Transverse ElectroMagnetic)导模.$k_{t}=0$时设TEM模存在，得到$\nabla_{\perp}\times\tilde{\bm{E}}(x,y)=-\dfrac{\partial B_{z}}{\partial t}=0$，则引入标量场$\tilde{\varphi}(x,y)$，其满足*Laplace*方程
 
 $$
 \nabla^2\tilde{\varphi}(x,y)=0,
@@ -570,7 +580,7 @@ k_{z}=\sqrt{k^2-k_{x}^2-k_{y}^2}=\sqrt{\mu\varepsilon\omega^2-\left(\frac{m\pi}{
 \end{equation}
 $$
 
-可见TE$\_{mn}$模的传播要求$\omega$大于一定的截止频率.
+可见TE$_{mn}$模的传播要求$\omega$大于一定的截止频率.
 
 #### 矩形波导管中的TM模
 
@@ -600,6 +610,7 @@ $$
 #### 导模的参数
 
 ¶由(7)式可知，TE$_{mn}$和TM$_{mn}$具有相同的色散特征，会发生简并，而由于不存在TM$_{m0}$和TM$_{0n}$，故TE$_{m0}$和TE$_{0n}$为非简并.
+
 ¶改写(7)式为
 
 $$
@@ -621,7 +632,7 @@ $$
 得到关系
 
 $$
-v_{p}v\_{g}=\left(\frac{c}{n}\right)^2.
+v_{p}v_{g}=\left(\frac{c}{n}\right)^2.
 $$
 
 ### 谐振腔

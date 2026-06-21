@@ -34,7 +34,7 @@ $$
 
 $$
 \begin{equation}
-\nabla^2\varphi_{m}=\frac{\rho_{m}}{\mu_{0}}.
+\nabla^2\varphi_{m}=-\frac{\rho_{m}}{\mu_{0}}.
 \end{equation}
 $$
 
@@ -122,7 +122,7 @@ $$
 
 ## 磁多极展开
 
-¶将(2)式子展开($\|\bm{r}\|\gg\max_{\bm{r}'\in\Sigma}\|\bm{r}'\|$)
+¶将(2)式展开($\|\bm{r}\|\gg\max\limits_{\bm{r}'\in\Sigma}\|\bm{r}'\|$)
 
 $$
 \begin{aligned}
@@ -204,6 +204,7 @@ $$
 $$
 
 这与之前对势能的计算吻合.
+
 ¶计算力矩
 
 $$
@@ -214,4 +215,3 @@ $$
 &=\bm{m}\times\bm{B}_{e}(\bm{0}).
 \end{aligned}
 $$
-

@@ -192,6 +192,7 @@ $$
 $$
 
 以上方程组（含边界条件）的恰定性由[Helmholtz定理](../append/Chap_01.md#helmholtz定理)保证.
+
 ¶积分形式
 
 $$
@@ -229,7 +230,7 @@ $$
 
 $$
 \begin{equation}
-\bm{e}_{n}\cdot(\bm{B}_{2}-\bm{B}\_{1})=0.
+\bm{e}_{n}\cdot(\bm{B}_{2}-\bm{B}_{1})=0.
 \end{equation}
 $$
 
@@ -246,13 +247,13 @@ $$
 任取一面积任意小的狭长矩形回路，长边$\Delta\bm{l}$平行于分界面.根据(7-d)式，位移电流项随面积趋于零，为使(10)式与右手定则含义一致，取介质1一侧为$-\Delta\bm{l}$，介质2一侧为$\Delta\bm{l}$
 
 $$
-(\bm{H}\_2-\bm{H}\_1)\cdot\Delta\bm{l}=I_f=(\bm{\alpha}_{f}\times\mathbf{e}_{n})\cdot\Delta\bm{l},\quad\forall\Delta\bm{l}\perp\bm{e}_{n},
+(\bm{H}_2-\bm{H}_1)\cdot\Delta\bm{l}=I_f=(\bm{\alpha}_{f}\times\mathbf{e}_{n})\cdot\Delta\bm{l},\quad\forall\Delta\bm{l}\perp\bm{e}_{n},
 $$
 
 即
 
 $$
-\bm{H}_2-\bm{H}\_1-\left[(\bm{H}\_2-\bm{H}\_1)\cdot\bm{e}_{n}\right]\bm{e}_{n}=\bm{\alpha}_{f}\times\bm{e}_{n}-\left[(\bm{\alpha}_{f}\times\bm{e}_{n})\cdot\bm{e}_{n}\right]\cdot\bm{e}_{n}=\bm{\alpha}_{f}\times\bm{e}_{n},
+\bm{H}_2-\bm{H}_1-\left[(\bm{H}_2-\bm{H}_1)\cdot\bm{e}_{n}\right]\bm{e}_{n}=\bm{\alpha}_{f}\times\bm{e}_{n}-\left[(\bm{\alpha}_{f}\times\bm{e}_{n})\cdot\bm{e}_{n}\right]\cdot\bm{e}_{n}=\bm{\alpha}_{f}\times\bm{e}_{n},
 $$
 
 两侧同左叉$\bm{e}_{n}$乘以简化
@@ -321,7 +322,7 @@ $$
 在线性介质中选定$(E,B)=(0,0)$为能量零点后
 
 $$
-w_{E}=\frac{1}{2}\bm{D}\cdot\bm{E},\quad w\_{M}=\frac{1}{2}\bm{B}\cdot\bm{H},
+w_{E}=\frac{1}{2}\bm{D}\cdot\bm{E},\quad w_{M}=\frac{1}{2}\bm{B}\cdot\bm{H},
 $$
 
 注意这一能量零点的选取与$\varphi(\infty)=0,\ \bm{A}(\infty)=\bm{0}$等价.
@@ -366,7 +367,7 @@ $$
 使用关系$\nabla\varphi=\nabla\cdot(\varphi\mathcal{I})$，其中$\mathcal{I}$表示二阶单位张量$\mathcal{I}_{ij}=\delta_{ij}$，带入(15)式移项得
 
 $$
-\underset{\text{自由电子受力}}{\underline{\rho_{f}\bm{E}+\bm{J}_{f}\times\bm{B}}}\underset{\text{极化效应}}{\underline{-\frac{1}{2}\bm{E}^2\nabla\varepsilon-\frac{1}{2}\bm{H}^2\nabla\mu}}=-\nabla\cdot\underset{\text{动量流密度的}}{\underline{\left[-\bm{D}\bm{E}-\bm{B}\bm{H}+\frac{1}{2}(\bm{D}\cdot\bm{E}+\bm{B}\cdot\bm{H})\mathcal{I}\right]}}-\frac{\partial }{\partial t}\underset{\text{电磁场动量}}{\underline{(\bm{D}\times\bm{B})}}，
+\underset{\text{自由电子受力}}{\underline{\rho_{f}\bm{E}+\bm{J}_{f}\times\bm{B}}}\underset{\text{极化效应}}{\underline{-\frac{1}{2}\bm{E}^2\nabla\varepsilon-\frac{1}{2}\bm{H}^2\nabla\mu}}=-\nabla\cdot\underset{\text{动量流密度张量}}{\underline{\left[-\bm{D}\bm{E}-\bm{B}\bm{H}+\frac{1}{2}(\bm{D}\cdot\bm{E}+\bm{B}\cdot\bm{H})\mathcal{I}\right]}}-\frac{\partial }{\partial t}\underset{\text{电磁场动量}}{\underline{(\bm{D}\times\bm{B})}}，
 $$
 
 即
