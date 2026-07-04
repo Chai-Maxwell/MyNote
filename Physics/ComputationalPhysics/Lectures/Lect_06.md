@@ -398,11 +398,49 @@ $$\langle \mathbf{r}_i \cdot \mathbf{r}_{i+k} \rangle = \ell^2 \cos^k\theta$$
 
 $$\langle R^2 \rangle = \sum_{i,j=1}^N \langle \mathbf{r}_i \cdot \mathbf{r}_j \rangle = N\ell^2 + 2\sum_{k=1}^{N-1} (N-k)\,\ell^2 \cos^k\theta$$
 
-当 $N \gg 1$ 时，几何级数求和（令 $x = \cos\theta$，$|x| < 1$ 当 $\theta \neq 0$）：
+抽出 $N\ell^2$：
 
-$$\langle R^2 \rangle \approx N\ell^2 \left(1 + 2\sum_{k=1}^{\infty} \cos^k\theta\right) = N\ell^2 \left(1 + \frac{2\cos\theta}{1 - \cos\theta}\right)$$
+$$\langle R^2 \rangle = N\ell^2 \left[1 + 2\sum_{k=1}^{N-1} \left(1 - \frac{k}{N}\right) \cos^k\theta\right] \tag{1}$$
+
+至此仍是精确的。以下两步将有限和近似为无穷几何级数：
+
+**第一步：截断论证**。记 $x = \cos\theta$。当 $\theta \neq 0, \pi$ 时 $|x| < 1$，$x^k$ 随 $k$ 指数衰减——特征衰减尺度为 $k^* \sim 1/|\ln x|$。对典型的键角（如四面体角 $\theta \approx 109.5^\circ$，$x \approx -0.333$），$|x|^{10} \approx 1.7 \times 10^{-5}$——$k > 10$ 的项几乎不贡献。既然 $k^* \ll N$（$N \sim 10^3 \text{–} 10^5$），和式中真正有贡献的项都满足 $k \ll N$，此时 $(1 - k/N) \approx 1$。
+
+**第二步：截断求和 → 无穷级数**。在 $(1)$ 中，令 $N \to \infty$、同时将求和上限延拓至无穷（新增的尾项 $k \geq N$ 按 $x^k$ 衰减，贡献指数级小）：
+
+$$\sum_{k=1}^{N-1} \left(1 - \frac{k}{N}\right) x^k \;\;\xrightarrow{N \gg 1}\;\; \sum_{k=1}^{\infty} x^k$$
+
+这就是从有限和到几何级数的过渡。这里被近似的不是 $x^k$——$x^k$ 本身就是精确的关联——而是权重因子 $(1 - k/N)$。当 $N$ 足够大时，对关联有贡献的 $k$ 范围内这个权重处处接近 1，因此近似是均匀收敛的。
+
+几何级数求和：
+
+$$\sum_{k=1}^{\infty} \cos^k\theta = \frac{\cos\theta}{1 - \cos\theta}$$
+
+代回：
+
+$$\langle R^2 \rangle = N\ell^2 \left(1 + 2 \cdot \frac{\cos\theta}{1 - \cos\theta}\right) = N\ell^2 \, \frac{1 - \cos\theta + 2\cos\theta}{1 - \cos\theta}$$
 
 $$\boxed{\langle R^2 \rangle_{\text{FRC}} = N\ell^2 \frac{1 + \cos\theta}{1 - \cos\theta}}$$
+
+**注**：当 $\theta$ 非常接近 $0$（近伸直链）时 $|x| \to 1$，$k^* \to \infty$，$k^* \ll N$ 不再成立——此时上述近似失效，必须用精确有限和。物理上这正是刚棒极限，$\langle R^2 \rangle \sim N^2\ell^2$。
+
+**作为差比级数精确求和**：如果不对 $(1-k/N)$ 做近似，有限和 $\sum_{k=1}^{N-1} (N-k) x^k$（$x = \cos\theta$）是标准的差比级数（Arithmetico-Geometric Series）——系数 $(N-k)$ 是 $k$ 的等差数列，$x^k$ 是等比数列。可以拆分为两个已知级数：
+
+$$\sum_{k=1}^{N-1} (N-k) x^k = N\sum_{k=1}^{N-1} x^k - \sum_{k=1}^{N-1} k x^k$$
+
+几何级数及其导数给出闭式（$x \neq 1$）：
+
+$$\sum_{k=1}^{n} x^k = \frac{x(1 - x^n)}{1 - x}, \qquad \sum_{k=1}^{n} k x^k = \frac{x\left[1 - (n+1)x^n + n x^{n+1}\right]}{(1 - x)^2}$$
+
+取 $n = N-1$，代入整理得精确的 $\langle R^2 \rangle$：
+
+$$\langle R^2 \rangle = N\ell^2 + 2\ell^2\left[N\frac{x(1-x^{N-1})}{1-x} - \frac{x\left[1 - N x^{N-1} + (N-1)x^N\right]}{(1-x)^2}\right]$$
+
+这个表达式对任意 $N$ 和 $-1 < x < 1$ 都精确。现在令 $N \to \infty$：因为 $|x| < 1$，所有含 $x^{N-1}$ 和 $x^N$ 的项都趋于零。剩余项为 $N \cdot x/(1-x) - x/(1-x)^2$。代回：
+
+$$\langle R^2 \rangle = N\ell^2 + 2\ell^2\left(\frac{Nx}{1-x} - \frac{x}{(1-x)^2}\right) = N\ell^2\left(1 + \frac{2x}{1-x}\right) - \frac{2\ell^2 x}{(1-x)^2}$$
+
+首项 $O(N)$ 主导，与几何级数近似的结果一致。第二项 $O(1)$ 是有限 $N$ 修正——当 $N \gg 1$ 时相对贡献 $\sim 1/N$，可以忽略。如果是差比级数途径，这个修正项是自动带出的副产品，不需要额外论证。
 
 注意当 $\theta = 90^\circ$ 时 $\cos\theta = 0$，FRC 退化为 FJC。当 $\theta \to 0$ 时 $\langle R^2 \rangle \to \infty$（链伸直为刚性棒）。
 
@@ -412,11 +450,29 @@ $$\boxed{\langle R^2 \rangle_{\text{FRC}} = N\ell^2 \frac{1 + \cos\theta}{1 - \c
 
 $$\mathbf{R}_{\text{cm}} = \frac{1}{N}\sum_{i=1}^N \mathbf{r}_i, \quad R_g^2 = \frac{1}{N}\sum_{i=1}^N (\mathbf{r}_i - \mathbf{R}_{\text{cm}})^2$$
 
-一个便于计算的等价形式（利用平行轴定理或直接展开平方）：
+直接按定义计算 $\langle R_g^2 \rangle$ 需要先求质心，损失了平移不变性。以下恒等式将 $R_g^2$ 表为所有粒子对距离平方的算术平均——不需要质心坐标：
 
-$$R_g^2 = \frac{1}{2N^2} \sum_{i=1}^N \sum_{j=1}^N (\mathbf{r}_i - \mathbf{r}_j)^2 = \frac{1}{2N^2} \sum_{i,j} R_{ij}^2$$
+**推导**：从定义出发展开平方：
 
-其中 $R_{ij}^2 = |\mathbf{r}_i - \mathbf{r}_j|^2$ 是第 $i$ 与第 $j$ 个单体之间的均方距离。
+$$R_g^2 = \frac{1}{N}\sum_i \left(\mathbf{r}_i - \frac{1}{N}\sum_j \mathbf{r}_j\right)^2 = \frac{1}{N}\sum_i \left(\mathbf{r}_i^2 - \frac{2}{N}\mathbf{r}_i\cdot\sum_j\mathbf{r}_j + \frac{1}{N^2}\sum_j\sum_k\mathbf{r}_j\cdot\mathbf{r}_k\right)$$
+
+第一项：$\frac{1}{N}\sum_i r_i^2$。第二项：$-\frac{2}{N^2}\sum_i\sum_j \mathbf{r}_i\cdot\mathbf{r}_j$。第三项：$N$ 倍的 $\frac{1}{N^2}\sum_j\sum_k \mathbf{r}_j\cdot\mathbf{r}_k$ 除以 $N$ = $\frac{1}{N^2}\sum_j\sum_k \mathbf{r}_j\cdot\mathbf{r}_k$。合并后两项：
+
+$$R_g^2 = \frac{1}{N}\sum_i r_i^2 - \frac{1}{N^2}\sum_i\sum_j \mathbf{r}_i\cdot\mathbf{r}_j$$
+
+将第一项改写为双重求和形式：$\frac{1}{N}\sum_i r_i^2 = \frac{1}{N^2}\sum_i\sum_j r_i^2$（对 $j$ 求和乘入因子 $N$）。代入：
+
+$$R_g^2 = \frac{1}{N^2}\sum_{i,j} \left(r_i^2 - \mathbf{r}_i\cdot\mathbf{r}_j\right)$$
+
+利用对称性——$r_i^2$ 也可以用 $r_j^2$ 写，将求和的一半用 $i$、另一半用 $j$ 对称化：
+
+$$R_g^2 = \frac{1}{2N^2}\sum_{i,j} \left(r_i^2 + r_j^2 - 2\,\mathbf{r}_i\cdot\mathbf{r}_j\right) = \frac{1}{2N^2}\sum_{i,j} (\mathbf{r}_i - \mathbf{r}_j)^2$$
+
+这就是所需的形式：
+
+$$\boxed{R_g^2 = \frac{1}{2N^2} \sum_{i=1}^N \sum_{j=1}^N (\mathbf{r}_i - \mathbf{r}_j)^2}$$
+
+其中 $R_{ij}^2 = |\mathbf{r}_i - \mathbf{r}_j|^2$ 是第 $i$ 与第 $j$ 个单体之间的均方距离。这个形式的优势是平移不变的——将全部 $\mathbf{r}_i$ 平移同一矢量 $\mathbf{a}$，$(\mathbf{r}_i + \mathbf{a}) - (\mathbf{r}_j + \mathbf{a}) = \mathbf{r}_i - \mathbf{r}_j$ 不变。
 
 **对 FJC 的证明**：FJC 中 $\langle R_{ij}^2 \rangle = |i - j| \ell^2$（中间 $|i-j|$ 个独立键的均方长度）。代入：
 

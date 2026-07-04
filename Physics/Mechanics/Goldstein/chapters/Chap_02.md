@@ -81,7 +81,7 @@ $$
 
 ### 约束系统的哈密顿原理
 
-¶对于自由度为$n$，并有$m$个完整约束的系统，为了在变分过程中体现完整约束$f^{(i)}(q^k,t)=0,\ i=1,\cdots,m$对虚位移的限制，使用拉格朗日乘子法(the method of _Lagrange undetermined multipliers_)
+¶对于自由度为$n$，并有$m$个完整约束的系统，为了在变分过程中体现完整约束$f^{(i)}(q^k,t)=0,\ i=1,\cdots,m$对虚位移的限制，使用拉格朗日乘子法(the method of *Lagrange undetermined multipliers*)
 
 $$
 I=\int_{t_1}^{t_2}L+\sum_{i=1}^{m}\lambda^{(i)}(t)f^{(i)}\ \mathrm{d}t,
@@ -211,7 +211,8 @@ $$
 H\equiv\dot{q}^j\frac{\partial L}{\partial \dot{q}^j}-L=\text{const}.\ (E=\text{const}.),
 $$
 
-定义了哈密顿量，这一等式称为_Jacobi_积分.
+定义了哈密顿量，这一等式称为*Jacobi*积分.
+
 ¶在$V$不含$\dot{q}^j$的三阶及以上项时，可将$L$按$\dot{q}^j$的幂次分解（$T=g_{ij}\dot{q}^{i}\dot{q}^{j}$，不引入$\dot{x}^j$的三阶及以上项）
 
 $$
@@ -225,6 +226,7 @@ H=L_{1}+\dot{q}^{j}\frac{\partial L_{2}}{\partial \dot{q}^j}-L=L_{2}'-L_{0},
 $$
 
 即哈密顿量不含$\dot{q}^{j}$的一次项.特别地，在正交坐标系中$H=L_{2}-L_{0}$.
+
 ¶当系统存在_Stokes_型阻力耗散时
 
 $$
@@ -240,4 +242,3 @@ $$
 $$
 \frac{\mathrm{d}H}{\mathrm{d}t}+\frac{\partial L}{\partial t}+2\mathcal{F}=0.
 $$
-

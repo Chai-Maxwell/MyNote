@@ -1,6 +1,7 @@
 {
     "python-envs.defaultEnvManager": "ms-python.python:system",
     "markdownlint.config": {
-    "MD049": false
+        "MD049": { "style": "asterisk" },
+        "MD050": { "style": "asterisk" }
     }
 }

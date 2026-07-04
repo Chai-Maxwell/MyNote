@@ -12,7 +12,7 @@ S = \int ds = \int \sqrt{ g_{\mu\nu} \frac{dx^\mu}{d\lambda} \frac{dx^\nu}{d\lam
 $$
 但为了数学方便，特别是对于类时或类光线情况，我们常引入平方形式的作用量，利用变分原理得到相同的极值曲线方程。  
 
-2. 两种作用量选择
+1. 两种作用量选择
 
 2.1 用弧长作作用量
 
@@ -29,9 +29,9 @@ L_2 = \frac12 g_{\mu\nu} \dot{x}^\mu \dot{x}^\nu
 $$
 这称为“测地线拉格朗日量”（相差因子不影响极值曲线形状）。对 L_2 用欧拉-拉格朗日方程得到的曲线与用 L_1 得到的在仿射参数下相同。
 
-我们选择 S = \int L_2 \, d\lambda 进行变分。
+我们选择 $S = \int L_2 \, d\lambda$ 进行变分。
 
-3. 欧拉-拉格朗日方程
+1. 欧拉-拉格朗日方程
 
 欧拉-拉格朗日方程为：
 $$
@@ -57,7 +57,7 @@ $$
 \frac{d}{d\lambda} \left( g_{\alpha\nu} \dot{x}^\nu \right) - \frac12 \partial_\alpha g_{\mu\nu} \, \dot{x}^\mu \dot{x}^\nu = 0
 $$
 
-4. 展开导数
+1. 展开导数
 
 注意 \(g_{\alpha\nu} = g_{\alpha\nu}(x(\lambda))\)，所以
 $$
@@ -76,7 +76,7 @@ $$
 g_{\alpha\nu} \ddot{x}^\nu + \left[ \partial_\mu g_{\alpha\nu} - \frac12 \partial_\alpha g_{\mu\nu} \right] \dot{x}^\mu \dot{x}^\nu = 0
 $$
 
-5. 引入克氏符号
+1. 引入克氏符号
 
 定义克里斯托弗符号（第二类）：
 $$
@@ -118,7 +118,7 @@ $$
 g_{\alpha\nu} \ddot{x}^\nu + g_{\alpha\sigma} \Gamma^\sigma_{\mu\nu} \dot{x}^\mu \dot{x}^\nu = 0
 $$
 
-6. 得到标准测地线方程
+1. 得到标准测地线方程
 
 用 g^{\rho\alpha} 乘上式并对 \alpha 求和：
 $$
@@ -132,14 +132,14 @@ $$
 
 其中，参数 \lambda 需满足沿曲线 g_{\mu\nu} \dot{x}^\mu \dot{x}^\nu = \text{const}，这正好是 L_2 为常数对应的条件，称为仿射参数。
 
-7. 类时、类光、类空与参数选择
+1. 类时、类光、类空与参数选择
 
 • 如果初始选择的作用量是 S = \int \sqrt{g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu
 } \, d\lambda，并固定参数为固有时间 \tau（对类时曲线），则 g_{\mu\nu} \dot{x}^\mu \dot{x}^\nu = -c^2（约定号差 -+++），得到相同的方程形式，但此时参数已是仿射参数。
 
 • 如果参数不是仿射参数，方程会多一项与速度平行的项，可通过重参数化消除。
 
-8. 几何解释
+1. 几何解释
 
 测地线方程也可以从“切矢量的协变导数沿曲线为0”得到：
 $$
@@ -160,3 +160,4 @@ $$
 \boxed{ \frac{d^2 x^\rho}{d\lambda^2} + \Gamma^\rho_{\mu\nu} \frac{dx^\mu}{d\lambda} \frac{dx^\nu}{d\lambda} = 0 }
 $$
 其中 \Gamma^\rho_{\mu\nu} 是 Levi-Civita 联络系数（由度规决定）。这是弯曲时空中自由粒子（仅受引力）的运动轨迹。
+

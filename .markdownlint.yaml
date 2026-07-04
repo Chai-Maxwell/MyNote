@@ -1,0 +1,5 @@
+# 使用 asterisk 作为斜体/粗体标记 (*italic*, **bold**)
+MD049:
+  style: asterisk
+MD050:
+  style: asterisk

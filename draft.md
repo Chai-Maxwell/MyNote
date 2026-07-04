@@ -718,7 +718,7 @@ $$
 \dot{Q}^{j}=\frac{\partial Q^{j}}{\partial t}+[Q^{j},H]_{qp},\ \dot{P}_{j}=\frac{\partial P_{j}}{\partial t}+[P_{j},H]_{qp},
 $$
 
-若变换是正则的，则应存在新的Hamilton函数$K(Q,P,t)$，使得新变量也满足正则方程：
+若变换是正则的，则应存在新的*Hamilton*函数$K(Q,P,t)$，使得新变量也满足正则方程：
 
 $$
 \dot{Q}^{j}=[Q^{j},K]_{QP}=\frac{\partial K}{\partial P_{j}},\quad
