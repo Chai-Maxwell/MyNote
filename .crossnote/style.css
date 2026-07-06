@@ -1,8 +1,9 @@
 /* Please visit the URL below for more information: */
 /*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
 .markdown-body {
   background-color: rgba(255, 255, 255, 0.85);
-  font-family: "Times New Roman", "SIL-Kai-Reg-Jian";
+  font-family: "Kaiti SC", "STKaiti", "Times New Roman", serif;
   font-weight: normal;
   color: #1a1a1a;
   counter-reset: h2-counter;

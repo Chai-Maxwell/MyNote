@@ -1,0 +1,37 @@
+#+TITLE: My Notes
+#+AUTHOR: Your Name
+#+STARTUP: overview
+
+* TODO [#B] 学习 Neovim Orgmode
+DEADLINE: <2026-07-07 Tue>
+  SCHEDULED: <2026-07-05>
+  :tag:neovim:orgmode:
+
+  今天的目标是掌握 orgmode 的基本用法。
+
+** DONE 安装插件
+   CLOSED: [2026-07-05 Mon 10:00]
+
+** TODO 练习快捷键 [#A]
+- [X] 创建标题
+- [X] 折叠展开
+- [ ] 设置 TODO 状态
+- [ ] 使用 Agenda 视图
+
+* 会议记录 2026-07-05
+  :tag:meeting:
+
+  - 讨论了项目进展
+  - 确定了下一步计划
+
+* 代码笔记
+  :tag:code:
+
+  #+BEGIN_SRC lua
+  print("hello from orgmode")
+  #+END_SRC
+
+  #+BEGIN_SRC python
+  def greet(name):
+      return f"Hello, {name}"
+  #+END_SRC
