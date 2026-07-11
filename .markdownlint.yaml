@@ -3,3 +3,6 @@ MD049:
   style: asterisk
 MD050:
   style: asterisk
+# 允许有序列表使用 1. 1. 1. 或 1. 2. 3.，不做强制检查
+MD029:
+  style: one_or_ordered
