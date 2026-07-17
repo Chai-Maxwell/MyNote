@@ -183,6 +183,7 @@ $$
 >$$\exist e'\in \mathcal{G}\ \text{s.t.}\ \forall r\in \mathcal{G},\ e'r=r.$$
 >4. 每个元素都存在左逆
 >$$\forall r\in \mathcal{G},\ \exist r'\in \mathcal{G}\ \text{s.t.}\ r'r=e'.$$
+>定义群元素的个数为群的阶(order), 无限群的阶记为$\infty$.
 
 ¶设$r'$的左逆为$r''$则
 
@@ -204,14 +205,126 @@ $$
 
 说明左乘法元就是右乘法元.
 
-¶对于*有限大*的群, 可以制作群的乘法表以便利查阅
+>==复元素==将群$\mathcal{G}$的子集视为整体, 称作复元素. 复元素逐元素参与运算（如复合乘法、求逆和共轭运算）.
+>
+>==重排定理== 设$t\in\mathcal{G}$, 则$t\cdot\mathcal{G}=\mathcal{G}\cdot{t}=\mathcal{G}^{-1}=\mathcal{G}$
+>
+>[证明] 证明两个集合相等就是证明互为子集. 以$t\cdot\mathcal{G}$为例, 因为
+>$$t\cdot\mathcal{G}=\{t\cdot{e},t\cdot{r},t^2,\dots\}\subset\mathcal{G},$$
+>又
+>$$\mathcal{G}=t^{-1}\cdot(t\cdot\mathcal{G})\subset t\cdot\mathcal{G},$$
+>故
+>$$t\cdot\mathcal{G}=\mathcal{G}.$$
+>如果事先为$\mathcal{G}$的元素标号, 那么$(t\cdot),(\cdot t),(\mathcal{G}^{-1})$这些操作不过改变了标号的顺序, 故称重排定理.
 
-<figure class="image-round" style="--image-width:80%">
-  <img src="../figurebank/chap_01_01.png">
-  <figcaption>
+¶对于*有限大*的群, 可以制作群的乘法表以便利查阅. 以$D_{4}$(Dihedral Group of the Square)为例, 记置换
 
-  $D_{4}$(Dihedral Group of the Square)乘法表</figcaption>
+$$
+e=
+\left(\begin{matrix}
+1&2&3&4\\
+1&2&3&4
+\end{matrix}\right),
+\,r=
+\left(\begin{matrix}
+1&2&3&4\\
+4&1&2&3
+\end{matrix}\right),
+\,s=
+\left(\begin{matrix}
+1&2&3&4\\
+1&4&3&2
+\end{matrix}\right).
+$$
+
+<figure class="table-caption th-center td-center">
+
+<div class="dual-header">
+
+|   $D_{4}$   | $e$ | $r$ | $r^2$ | $r^3$ | $s$ | $sr$ | $sr^2$ | $sr^3$ |
+|------|-----|-----|-------|-------|-----|------|--------|--------|
+| $e$   | $e$ | $r$ | $r^2$ | $r^3$ | $s$ | $sr$ | $sr^2$ | $sr^3$ |
+| $r$   | $r$ | $r^2$ | $r^3$ | $e$ | $sr^3$ | $s$ | $sr$ | $sr^2$ |
+| $r^2$ | $r^2$ | $r^3$ | $e$ | $r$ | $sr^2$ | $sr^3$ | $s$ | $sr$ |
+| $r^3$ | $r^3$ | $e$ | $r$ | $r^2$ | $sr$ | $sr^2$ | $sr^3$ | $s$ |
+| $s$   | $s$ | $sr$ | $sr^2$ | $sr^3$ | $e$ | $r$ | $r^2$ | $r^3$ |
+| $sr$  | $sr$ | $sr^2$ | $sr^3$ | $s$ | $r^3$ | $e$ | $r$ | $r^2$ |
+| $sr^2$ | $sr^2$ | $sr^3$ | $s$ | $sr$ | $r^2$ | $r^3$ | $e$ | $r$ |
+| $sr^3$ | $sr^3$ | $s$ | $sr$ | $sr^2$ | $r$ | $r^2$ | $r^3$ | $e$ |
+
+</div>
+
+<figcaption>
+
+$D_{4}$ 群乘法表</figcaption>
 </figure>
+
+¶研究$D_{N}$, 将正$N$边形放在$xy$平面上, 其几何中心取为原点, 标号$1$的点置于$x$轴上, 编号逆时针增大. 令$s_{j},\, j=0,\dots,N-1$代表将正$N$边关于与$x$轴成$2\pi j/N$夹角的轴做对称操作, 那么$s_{j+1}=rs_{j}=r^{j+1}s_{0}$. 总结得到三条有利计算的规则
+
+$$
+\left\{\begin{aligned}
+&r^{N}=s_{j}^2=e,\\
+&r^{m}s_{j}=s_{\operatorname{mod}(j+m,N)}
+\end{aligned}\right.\Longrightarrow
+s_{j}r^{m}=(r^{N-m}s_{j})^{-1}=s_{\operatorname{mod}(j-m,N)}.
+$$
+
+### 群的各种子集
+
+>==元素的阶== 若对于$r\in\mathcal{G}$, 存在一个最小的非负整数使得$r^{n}=e$成立, 则称$r$的阶为$n$, 若这样的$n$不存在, 则记$r$的阶为$\infty$. 容易知道, 有限群的元素阶也有限.
+>
+>==子群== 对于群$(\mathcal{G},\cdot)$若其子集$(\mathcal{H},\cdot)$也构成群, 则称$(\mathcal{H},\cdot)$为子群.
+>
+>==循环子群== 包含$e$和指定元素$r$的最小子群. 对于有限阶元素, 循环子群可以只用正幂表示. 一般起见, $r$的循环子群表示为
+>$$\braket{r}=\{r^{k}|k\in\mathbb{Z}\}.$$
+>==陪集== 对于群$(\mathcal{G},\cdot)$和子群$(\mathcal{H},\cdot)$, 取$r\in\mathcal{G}\setminus\mathcal{H}$, 定义左陪集和右陪集(left and right coset)
+>$$r\cdot\mathcal{H},\quad\mathcal{H}\cdot r,$$
+>由反证法可证陪集与$\mathcal{H}$没有公共元素, 且陪集也没有重复元素.
+>
+>==子群的指数== 构造两个左陪集$r_{j}\cdot\mathcal{H}$和$r_{k}\cdot\mathcal{H}\ (r_{j}\neq r_{k})$, 则要么两个陪集相同, 要么没有公共元素, 这是因为
+>$$\exist h_{\mu},h_{\nu}\ \text{s.t.} \ r_{j}h_{\mu}=r_{k}h_{\nu}\Longrightarrow r_{j}\cdot\mathcal{H}=r_{k}\cdot[(h_{\nu}h_{\mu}^{-1})\cdot{H}]=r_{k}\cdot\mathcal{H},$$
+>于是群可按如下步骤分解（*Lagrange*定理）
+>$$\mathcal{G}=\mathcal{H}\cup(r_{1}\cdot\mathcal{H})\cup\dots\cup(r_{d}\cdot\mathcal{H}),\ r_{k+1}\in[(\mathcal{G}\setminus\mathcal{H})\setminus\dots]\setminus(r_{k}\cdot\mathcal{H}),$$
+>其中$d$称为子群$\mathcal{H}$的指数(index), 得到群与子群的阶的倍数关系$\#\mathcal{G}=d\#\mathcal{H}$（素指数的群只有平庸子群）.
+>
+>==正规子群== 任何左陪集和右陪集均相同的子群称为正规子群(normal subgroup),
+>$$r_{j}\cdot\mathcal{H}=\mathcal{H}\cdot r_{j},\forall j=1,\dots,(\#\mathcal{G}-\#\mathcal{H}),$$
+>记为$\mathcal{H}\trianglelefteq\mathcal{G}$. 显然, 指数为$2$的子群都是正规子群.
+>
+>==商群== 将正规子群$\mathcal{H}$和其指数个互补相交的陪集$r_{j}\mathcal{H}$视为复元素组成集合, 复元素乘法规定$\mathcal{K}\mathcal{R}=\{kr|k\in\mathcal{K},r\in\mathcal{H}\}$, 对于子群$\mathcal{H}\mathcal{H}=\mathcal{H}$. $\mathcal{H}$的正规性使此集合成为群, 称为商群(quotient group), 记为$\mathcal{G}/\mathcal{H}$.
+>
+>==共轭元素== 对任意$s\in\mathcal{G}$, 若$r'=srs^{-1}$则称$r'$与$r$相互共轭(conjugate), 共轭是一种关系, 具有反身性、对称性和传递性.
+>
+>==类== 类(class)是所有互相共轭元素的集合, 记为
+>$$\mathcal{C}_{\alpha}=\{r_{k}|r_{k}=sr_{j}s^{-1},s\in\mathcal{G}\},$$
+>其中下角标$\alpha$用于索引类. 由共轭的传递性, 两个类要么无公共元素, 要么全等. 因此, 除$\{e\}$类, 其余类不构成子群.
+>
+>==相逆类== 对于共轭关系$r'=srs^{-1}$取逆, 逆元也保持共轭$(r')^{-1}=sr^{-1}s^{-1}$, 定义相逆类(reciprocal class)
+>$$\mathcal{C}_{\alpha}^{-1}=\{r_{k}^{-1}|r_{k}\in\mathcal{C}_{\alpha}\},$$
+>若$\mathcal{C}_{\alpha}^{-1}=\mathcal{C}_{\alpha}$, 称这样的类为自逆类.
+
+¶以$D_{4}$为例
+
+<figure class="table-caption">
+
+|概念|说明|
+|-----|-----|
+|子群|$\mathcal{R}=\{e,r,r^2,r^3\}$|
+|陪集分解|$D_{4}=\mathcal{R}\cup(s\cdot\mathcal{R}),\,d=2$|
+|正规子群|$\mathcal{R}\trianglelefteq D_{4}$|
+|商群|$D_{4}/\mathcal{R}=\{\mathcal{R},s\cdot\mathcal{R}\}$|
+|类|$\mathcal{C}_{0}=\{e\},\mathcal{C}_{1}=\{r,r^3\},\mathcal{C}_{2}=\{r^2\},\mathcal{C}_{3}=\{s,sr^2\},\mathcal{C}_{4}=\{sr,sr^3\}$|
+|相逆类|四个类均自逆|
+
+<figcaption>
+
+$D_{4}$的子集
+</figcaption>
+</figure>
+
+### 作用于子集的稳定化子、正规化子和中心化子
+
+>==稳定化子==
 
 ### 群的同态与同构
 
