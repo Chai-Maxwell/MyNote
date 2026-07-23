@@ -199,6 +199,18 @@
   font-synthesis-style: none;
   border-left: 2px solid #dcb48c;
 }
+
+/* ===== 多色标记 — <mark type="xxx"> =====
+ * 用法：直接在 .md 中使用 <mark type="def">文本</mark>
+ * type 属性决定背景颜色，不传 type 则使用 base mark 的荧光黄。
+ * 扩展：新增 .markdown-body mark[type="xxx"] 即可。
+ */
+.markdown-body mark[type="def"] {
+  background-color: #ffffcd;
+}
+.markdown-body mark[type="thm"] {
+  background-color: #dffffd;
+}
 .markdown-body .gold {
   color: #b8860b;
   font-weight: normal;
