@@ -241,14 +241,14 @@ $$
 
 <div class="dual-header">
 
-|   $\mathcal{D}_{4}$   | $e$ | $r$ | $r^2$ | $r^3$ | $s$ | $sr$ | $sr^2$ | $sr^3$ |
-|------|-----|-----|-------|-------|-----|------|--------|--------|
-| $e$   | $e$ | $r$ | $r^2$ | $r^3$ | $s$ | $sr$ | $sr^2$ | $sr^3$ |
-| $r$   | $r$ | $r^2$ | $r^3$ | $e$ | $sr^3$ | $s$ | $sr$ | $sr^2$ |
+| $\mathcal{D}_{4}$ | $e$ | $r$ | $r^2$ | $r^3$ | $s$ | $sr$ | $sr^2$ | $sr^3$ |
+| ------ | ----- | ----- | ------- | ------- | ----- | ------ | -------- | -------- |
+| $e$ | $e$ | $r$ | $r^2$ | $r^3$ | $s$ | $sr$ | $sr^2$ | $sr^3$ |
+| $r$ | $r$ | $r^2$ | $r^3$ | $e$ | $sr^3$ | $s$ | $sr$ | $sr^2$ |
 | $r^2$ | $r^2$ | $r^3$ | $e$ | $r$ | $sr^2$ | $sr^3$ | $s$ | $sr$ |
 | $r^3$ | $r^3$ | $e$ | $r$ | $r^2$ | $sr$ | $sr^2$ | $sr^3$ | $s$ |
-| $s$   | $s$ | $sr$ | $sr^2$ | $sr^3$ | $e$ | $r$ | $r^2$ | $r^3$ |
-| $sr$  | $sr$ | $sr^2$ | $sr^3$ | $s$ | $r^3$ | $e$ | $r$ | $r^2$ |
+| $s$ | $s$ | $sr$ | $sr^2$ | $sr^3$ | $e$ | $r$ | $r^2$ | $r^3$ |
+| $sr$ | $sr$ | $sr^2$ | $sr^3$ | $s$ | $r^3$ | $e$ | $r$ | $r^2$ |
 | $sr^2$ | $sr^2$ | $sr^3$ | $s$ | $sr$ | $r^2$ | $r^3$ | $e$ | $r$ |
 | $sr^3$ | $sr^3$ | $s$ | $sr$ | $sr^2$ | $r$ | $r^2$ | $r^3$ | $e$ |
 
@@ -291,7 +291,7 @@ $$
 >$$r_{j}\cdot\mathcal{H}=\mathcal{H}\cdot r_{j},\forall j=1,\dots,(\#\mathcal{G}-\#\mathcal{H}),$$
 >记为$\mathcal{H}\trianglelefteq\mathcal{G}$. 显然, 指数为$2$的子群都是正规子群.
 >
->==商群== 将正规子群$\mathcal{H}$和其指数个互补相交的陪集$r_{j}\mathcal{H}$视为复元素组成集合, 复元素乘法规定$\mathcal{K}\mathcal{R}=\{kr\mid k\in\mathcal{K},r\in\mathcal{H}\}$, 对于子群$\mathcal{H}\mathcal{H}=\mathcal{H}$. $\mathcal{H}$的正规性使此集合成为群, 称为商群(quotient group), 记为$\mathcal{G}/\mathcal{H}$.
+>==商群== 将正规子群$\mathcal{H}$和其指数个互不相交的陪集$r_{j}\mathcal{H}$视为复元素组成集合, 复元素乘法规定$\mathcal{K}\mathcal{R}=\{kr\mid k\in\mathcal{K},r\in\mathcal{H}\}$, 对于子群$\mathcal{H}\mathcal{H}=\mathcal{H}$. $\mathcal{H}$的正规性使此集合成为群, 称为商群(quotient group), 记为$\mathcal{G}/\mathcal{H}$.
 >
 >==共轭元素== 对任意$s\in\mathcal{G}$, 若$r'=srs^{-1}$则称$r'$与$r$相互共轭(conjugate), 共轭是一种关系, 具有反身性、对称性和传递性.
 >
@@ -325,7 +325,7 @@ $\mathcal{D}_{4}$的子集
 ### 群的作用
 
 >==轨道== 假定$\mathcal{G}$中的元素作用于集合$X$, 取$x\in X$, 定义轨道(orbit)
->$$\mathcal{O}_{\mathcal{G}}(x)=\{gx\mid g\in\mathcal{G}\}.$$
+>$$\mathcal{O}_{x}=\{gx\mid g\in\mathcal{G}\}.$$
 >
 >==稳定化子== 假定$\mathcal{G}$中的元素作用于集合$X$, 取$x\in X$, 定义稳定化子(Stabilizer)
 >$$\operatorname{Stab}_{\mathcal{G}}(x)\stackrel{\text{def}}{=}\mathcal{G}_{x}=\{g\in\mathcal{G}\mid gx=x\}.$$
@@ -333,10 +333,16 @@ $\mathcal{D}_{4}$的子集
 >==正规化子== 假定$\mathcal{G}$中的元素作用于幂集$2^{\mathcal{G}}$, 取$\mathcal{H}\in 2^{\mathcal{G}}$, 定义正规化子(Nomalizer)
 >$$\mathcal{N}_{\mathcal{G}}(\mathcal{H})=\{g\in\mathcal{G}\mid g\mathcal{H}g^{-1}=\mathcal{H}\}.$$
 >
->==中心化子== 假定$\mathcal{H}$中的元素作用于$\mathcal{G}$自身, 取$\mathcal{H}\subset\mathcal{G}$, 定义中心化子(centralizer)
+>==中心化子== 假定$\mathcal{H}$中的元素作用于$\mathcal{G}$自身, 取$\mathcal{H}\subset\mathcal{G}$, 定义中心化子(Centralizer)
 >$$\mathcal{C}_{\mathcal{G}}(\mathcal{H})=\{g\in\mathcal{G}\mid ghg^{-1},\forall h\in\mathcal{H}\}.$$
 >
 ><mark type="thm">轨道-稳定化子定理</mark>
+>$$\#\mathcal{O}_{x}=\frac{\#\mathcal{G}}{\#\mathcal{G}_{x}}.$$
+>[证明] 作$\varphi:\{g\mathcal{G}_{x}|g\in\mathcal{G}\}\to\mathcal{O}_{x},\,\varphi(g\mathcal{G}_{x})=gx,$
+>则由$\varphi(g_{1}\mathcal{G}_{x})=\varphi(g_{2}\mathcal{G}_{x})$即$g_{1}x=g_{2}x$
+>$$g_{2}^{-1}g_{1}x=x\Longrightarrow g_{2}^{-1}g_{1}\in\mathcal{G}_{x},g_{1}\mathcal{G}_{x}=g_{2}\mathcal{G}_{x},$$
+>知$\varphi$是单射. 又$\forall y\in\mathcal{O}_{x},y=gx=\varphi(g\mathcal{G}_{x})$知$\varphi$是满射. 从而$\varphi$是双射
+>$$\#\mathcal{O}_{x}=\#\{g\mathcal{G}_{x}|g\in\mathcal{G}\}=\frac{\#\mathcal{G}}{\#\mathcal{G}_{x}}.$$
 
 ### 群的同态与同构
 
