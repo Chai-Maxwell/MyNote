@@ -334,7 +334,7 @@ $\mathcal{D}_{4}$的子集
 >$$\mathcal{N}_{\mathcal{G}}(\mathcal{H})=\{g\in\mathcal{G}\mid g\mathcal{H}g^{-1}=\mathcal{H}\}.$$
 >
 >==中心化子== 假定$\mathcal{H}$中的元素作用于$\mathcal{G}$自身, 取$\mathcal{H}\subset\mathcal{G},$ 定义中心化子(Centralizer)
->$$\mathcal{C}_{\mathcal{G}}(\mathcal{H})=\{g\in\mathcal{G}\mid ghg^{-1},\forall h\in\mathcal{H}\}.$$
+>$$\mathcal{C}_{\mathcal{G}}(\mathcal{H})=\{g\in\mathcal{G}\mid h=ghg^{-1},\forall h\in\mathcal{H}\}.$$
 >
 ><mark type="thm">轨道-稳定化子定理</mark>
 >$$\#\mathcal{O}_{x}=\frac{\#\mathcal{G}}{\#\mathcal{G}_{x}}.$$

@@ -17,15 +17,23 @@
 @import url("font/fz-fang-song-z-02-s.css");
 
 /*
- * QuoteSerifItalic — 仅对字母和数字提供 Times New Roman 意大利体，
- * 标点符号（[]、: 等）不在 unicode-range 中，会穿透到下一个字体。
- * 用于 blockquote / em 等需要"英文斜体、中文正体"的场景。
+ * QuoteSerifItalic — Times New Roman 意大利体，用于 blockquote / em
+ * 等需要"英文斜体、中文正体"的场景。
+ *
+ * 【经验教训：Firefox 下两个坑，都实测过】
+ *   1. src 必须用 url() 内嵌字体文件：local("Times New Roman") 会
+ *      把正体字形绑定到斜体声明上，渲染出来永远是正体。
+ *   2. 不能写 unicode-range：带 range 的斜体 @font-face 在 Firefox
+ *      里整面失效（中文字形不在 timesi.ttf 的 cmap 里，本来就会自动
+ *      落到字体链下一项，无需 range 限制）。
+ *   3. em 字体链第二项用系统字体（Noto Serif CJK SC）；若第二项是
+ *      webfont 家族（FZKai-Z03 等）会连带跳过第一项字体面。
+ * timesi.ttf 来自 ttf-ms-fonts 包。
  */
 @font-face {
   font-family: "QuoteSerifItalic";
-  src: local("Times New Roman");
+  src: url("font/timesi.ttf"), local("Times New Roman");
   font-style: italic;
-  unicode-range: U+41-5A, U+61-7A, U+30-39;
 }
 
 .markdown-body {
@@ -105,13 +113,13 @@
   color: #dcb48c;
 }
 .markdown-body em {
-  font-family: "QuoteSerifItalic", "FZKai-Z03";
+  font-family: "QuoteSerifItalic", "Noto Serif CJK SC", serif;
   font-style: italic;
   font-synthesis-style: none;
   color: #1a1a1a;
 }
 .markdown-body blockquote {
-  font-family: "QuoteSerifItalic", "FZKai-Z03";
+  font-family: "QuoteSerifItalic", "Noto Serif CJK SC", serif;
   font-style: italic;
   font-synthesis-style: none;
   margin: 1.5em 0;
@@ -194,7 +202,7 @@
   padding: 2px 4px;
   border-radius: 3px;
   color: #000000;
-  font-family: "QuoteSerifItalic", "FZKai-Z03";
+  font-family: "QuoteSerifItalic", "Noto Serif CJK SC", serif;
   font-style: italic;
   font-synthesis-style: none;
   border-left: 2px solid #dcb48c;
@@ -362,7 +370,7 @@
 .markdown-body .table-caption .table-caption-text {
   margin-top: 4px;
   color: #666;
-  font-family: "QuoteSerifItali", "FZKai-Z03";
+  font-family: "QuoteSerifItalic", "Noto Serif CJK SC", serif;
   font-size: 0.8em;
   font-style: italic;
   font-synthesis-style: none;
