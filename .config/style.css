@@ -17,17 +17,15 @@
 @import url("font/fz-fang-song-z-02-s.css");
 
 /*
- * QuoteSerifItalic — Times New Roman 意大利体，用于 blockquote / em
- * 等需要"英文斜体、中文正体"的场景。
+ * QuoteSerifItalic — Times New Roman 意大利体，用于 em / mark 等
+ * 需要"英文斜体、中文楷体正体"的场景。
  *
- * 【经验教训：Firefox 下两个坑，都实测过】
+ * 【经验教训：Firefox 下的两个坑，均实测确认】
  *   1. src 必须用 url() 内嵌字体文件：local("Times New Roman") 会
  *      把正体字形绑定到斜体声明上，渲染出来永远是正体。
  *   2. 不能写 unicode-range：带 range 的斜体 @font-face 在 Firefox
- *      里整面失效（中文字形不在 timesi.ttf 的 cmap 里，本来就会自动
- *      落到字体链下一项，无需 range 限制）。
- *   3. em 字体链第二项用系统字体（Noto Serif CJK SC）；若第二项是
- *      webfont 家族（FZKai-Z03 等）会连带跳过第一项字体面。
+ *      里整面失效。中文不在 timesi.ttf 的 cmap 里，会自动落到字体链
+ *      下一项（FZKai-Z03 → 中文楷体正体），无需 range 限制。
  * timesi.ttf 来自 ttf-ms-fonts 包。
  */
 @font-face {
@@ -113,19 +111,33 @@
   color: #dcb48c;
 }
 .markdown-body em {
-  font-family: "QuoteSerifItalic", "Noto Serif CJK SC", serif;
+  font-family: "QuoteSerifItalic", "FZKai-Z03";
   font-style: italic;
   font-synthesis-style: none;
   color: #1a1a1a;
 }
 .markdown-body blockquote {
-  font-family: "QuoteSerifItalic", "Noto Serif CJK SC", serif;
-  font-style: italic;
+  font-family: "Times New Roman", "FZKai-Z03", serif;
+  font-style: normal;
   font-synthesis-style: none;
   margin: 1.5em 0;
   padding: 0.2em 1em;
   color: #1a1a1a;
   border-left: 4px solid #dcb48c;
+  background-color: #fdfffd;
+  border-radius: 6px;
+  position: relative;
+  padding: 5px 10px 5px 10px;
+  margin: 12px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.markdown-body blockquote[type="sidenote"] {
+  font-family: "Times New Roman", "FZKai-Z03", serif;
+  font-style: normal;
+  font-synthesis-style: none;
+  color: #1a1a1a;
+  border-left: none;
+  border-right: 4px solid #cccccc;
   background-color: #fdfffd;
   border-radius: 6px;
   position: relative;
@@ -202,7 +214,7 @@
   padding: 2px 4px;
   border-radius: 3px;
   color: #000000;
-  font-family: "QuoteSerifItalic", "Noto Serif CJK SC", serif;
+  font-family: "QuoteSerifItalic", "FZKai-Z03";
   font-style: italic;
   font-synthesis-style: none;
   border-left: 2px solid #dcb48c;
@@ -370,7 +382,7 @@
 .markdown-body .table-caption .table-caption-text {
   margin-top: 4px;
   color: #666;
-  font-family: "QuoteSerifItalic", "Noto Serif CJK SC", serif;
+  font-family: "QuoteSerifItalic", "FZKai-Z03";
   font-size: 0.8em;
   font-style: italic;
   font-synthesis-style: none;
