@@ -62,7 +62,7 @@ $$f^{-1}[\mathcal{V}]=\{\mathcal{U}\in\mathcal{X}:f(\mathcal{U})=\mathcal{V}\}\i
 
 <blockquote>
 
-==流形(manifold)==
+==流形(manifold)== $n$维流形$\mathcal{M}$是这样一个*Hausdorff*空间, 其每一点处都能找到一个含有该点的开集, 使得此开集与$\mathbb{R}^{n}$同胚.
 </blockquote>
 
 <blockquote>

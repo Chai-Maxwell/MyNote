@@ -70,3 +70,9 @@
 ## $\mathfrak{B}_{1}$[习题1-8]
 
 ¶设群$\mathcal{G}$的阶数$g=2n$, $n$是大于$2$的素数, 准确到同构, 证明群$\mathcal{G}$只有两种: 循环群$\mathcal{C}_{2n}$和正$n$边形对称群$\mathcal{D}_{n}$.
+
+<blockquote>
+
+[证明] 根据*Cauchy*定理, $\exists r\in\mathcal{G},\,\braket{r}_{p}\leq\mathcal{G}$. 对于子群$\braket{r}_{p}$其指数为$2p/p=2$, 又因为陪集互斥, 所以$\braket{r}_{p}\trianglelefteq\mathcal{G}$. 取截面$\sigma$, 设$\operatorname{img}\sigma=\{e,s\}$构成补子群$\braket{s}_{2}$. 根据分裂引理
+$$\mathcal{G}\cong\braket{r}_{p}\rtimes_{\varphi}\braket{s}_{2},\quad\varphi:\braket{s}_{2}\to\operatorname{Aut}\braket{r}_{p}.$$
+</blockquote>

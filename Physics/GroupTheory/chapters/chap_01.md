@@ -303,6 +303,10 @@ $$r_{j}\cdot\mathcal{H}=\mathcal{H}\cdot r_{j},\forall j=1,\dots,(\#\mathcal{G}-
 
 ==商群== 将正规子群$\mathcal{H}$和其指数个互不相交的陪集$r_{j}\mathcal{H}$视为复元素组成集合, 复元素乘法规定$\mathcal{K}\mathcal{R}=\{kr\mid k\in\mathcal{K},r\in\mathcal{H}\},$ 对于子群$\mathcal{H}\mathcal{H}=\mathcal{H}.$ $\mathcal{H}$的正规性使此集合成为群, 称为商群(quotient group), 记为$\mathcal{G}/\mathcal{H}.$
 
+==商映射(quotient mapping)== $\pi:\mathcal{G}\to\mathcal{G}/\mathcal{H},\,\pi(g)=g\mathcal{H}$.
+
+==补子群(complement)== 若存在$\mathcal{R}\leq\mathcal{G}$, 其与正规子群$\mathcal{H}$间满足(1)$\mathcal{R}\cap\mathcal{H}=\{e\}$;(2)$\mathcal{R}\mathcal{H}=\mathcal{G}$. 则称$\mathcal{R}$为补子群.
+
 ==共轭元素== 对任意$s\in\mathcal{G},$ 若$r'=srs^{-1}$则称$r'$与$r$相互共轭(conjugate), 共轭是一种关系, 具有反身性、对称性和传递性.
 
 ==类== 类(class)是所有互相共轭元素的集合, 记为
@@ -380,6 +384,10 @@ $$\exist f:(\mathcal{G},\cdot)\to(\mathcal{G}',*)\ \text{s.t.}\ f(r\cdot s)=f(r)
 $$(g_{1},k_{1})\circ_{\varphi}(g_{2},k_{2})=(g_{1}\cdot\varphi(k_{1})(g_{2}),k_{1}k_{2}),$$
 记$(\mathcal{G}\times\mathcal{K},\circ_{\varphi})$为$\mathcal{G}\rtimes_{\varphi}\mathcal{K}$, 称为$\mathcal{K}$作用在$\mathcal{G}$上的半直积.
 
+==截面== 定义同态
+$$\sigma:\mathcal{G}/\mathcal{H}\to\mathcal{G},\,\pi\circ\sigma=\mathrm{id}_{\mathcal{G}/\mathcal{H}},$$
+其中$\pi$是商映射, 称$\sigma$为截面(section). 可以证明, $\operatorname{img}\sigma$是补子群. 根据分裂引理(splitting lemma)可以得到一个重要结果<mark type="thm">$\mathcal{G}\cong\mathcal{H}\rtimes_{\varphi}\operatorname{img}\sigma$</mark>.
+
 </blockquote>
 
 ¶对于$\mathcal{D}_{n}$和其两个循环子群的直积$\braket{s}\times\braket{r}.$ 在$n=2$时, 因为$sr=rs,$ $\mathcal{D}_{2}$是*Abelian*群,
@@ -394,18 +402,18 @@ $$
 
 <mark type="thm">*Cauchy*定理</mark> 若$\mathcal{G}$是有限群, $p$是素数, 且$p\mid\#\mathcal{G}$, 则$\mathcal{G}$中存在阶为$p$的元素, 从而存在$p$阶子群.
 
-[证明] 作$\mathcal{X}=\{(g_{1},\dots,g_{p})\in\mathcal{G}^{p}\mid g_{1}\cdots g_{p}=e\},$
-则$\#\mathcal{X}=(\#\mathcal{G})^{p-1}$, 故$p\mid\#\mathcal{X}$. 定义轮换$\sigma\in\operatorname{Aut}(\mathcal{X}):(g_{1},\dots,g_{p})\mapsto(g_{2},\dots,g_{p-1})$. 令$\mathcal{C}_{p}=\braket{\sigma}\cong\mathbb{Z}/p\mathbb{Z}$作用在$\mathcal{X}$.
+[证明] 作$\mathcal{X}=\{(g_{1},\dots,g_{p})\in\mathcal{G}^{p}: g_{1}\cdots g_{p}=e\},$
+则$\#\mathcal{X}=(\#\mathcal{G})^{p-1}$, 故$p\mid\#\mathcal{X}$. 定义轮换$\sigma\in\operatorname{Aut}(\mathcal{X}):(g_{1},\dots,g_{p})\mapsto(g_{2},\dots,g_{1})$. 令$\mathcal{C}_{p}=\braket{\sigma}\cong\mathbb{Z}/p\mathbb{Z}$作用在$\mathcal{X}$.
 
-¶对$\mathcal{C}_{p}$应用轨道-稳定化子定理, 得到
+¶对$\mathcal{C}_{p}$应用轨道-稳定化子定理以对$\mathcal{X}$中元素进行分类, 得到
 $$\#\mathcal{O}_{x}=\frac{\#\mathcal{C}_{p}}{\#(\mathcal{C}_{p})_{x}}=\frac{p}{\#(\mathcal{C}_{p})_{x}},\,\forall x\in\mathcal{X},$$
 因为$p$是素数, 则$\#\mathcal{O}_{x}$为$1$或$p$. 将$\mathcal{X}$按轨道分解
-$$\mathcal{X}=\bigcup_{x\in\mathcal{X}}\mathcal{O}_{x}=\{\mathcal{O}_{1},\dots,\mathcal{O}_{n}\}\Longrightarrow\#\mathcal{X}=\sum_{i=1}^{n}\#\mathcal{O}_{i},$$
+$$\mathcal{X}=\bigsqcup_{x\in\mathcal{X}}\mathcal{O}_{x}=\{\mathcal{O}_{1},\dots,\mathcal{O}_{n}\}\Longrightarrow\#\mathcal{X}=\sum_{i=1}^{n}\#\mathcal{O}_{i},$$
 结合$\#\mathcal{O}_{x}$等于$1$或$p$, 记长度为$1$的轨道有$N$个, 得
 $$N\equiv\#\mathcal{X} \mod p,$$
 又因为已有$p\mid\#\mathcal{X}$, 故$N\equiv0\mod p$.
 
-¶ 因为已经有$\{e,\dots,e\}$这样长度为$1$的轨道, 于是$N\geq p$, 所以至少还有$p-1$个$(r,\dots,r)\in\mathcal{X}$, 即$\mathcal{G}$中至少有$p-1$个元素$\braket{r}_{p}\leq\mathcal{G}$.
+¶ 因为已经有$\{e,\dots,e\}$这样长度为$1$的轨道, 于是$N\geq p$, 所以至少还有$p-1$个$(r,\dots,r)\in\mathcal{X}$, 即$\mathcal{G}$中至少有$p-1$个元素$r$使得$\braket{r}_{p}\leq\mathcal{G}$.
 </blockquote>
 
 <blockquote>
