@@ -70,6 +70,24 @@ $$f^{-1}[\mathcal{V}]=\{\mathcal{U}\in\mathcal{X}:f(\mathcal{U})=\mathcal{V}\}\i
 ==同胚映射(homeomorphic mapping)==
 
 ==拓扑性质==
+
+<blockquote type="sidenote">
+
+<mark type="thm">紧致性(compact)</mark>
+
+==开覆盖==
+</blockquote>
+
+<blockquote type="sidenote">
+
+<mark type="thm">连通性(connectedness)</mark>
+</blockquote>
+
+<blockquote type="sidenote">
+
+<mark type="thm">可分性(separation)</mark>
+</blockquote>
+
 </blockquote>
 
 ### 张量代数
